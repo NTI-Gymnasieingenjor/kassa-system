@@ -1,7 +1,7 @@
-# Kassasystem
+# KassaSystem
 
-## Development environment standard
-Visual studio 2019
+## Development Environment Standard
+Visual Studio 2019
 
 ## Programming Language:
 - C#
