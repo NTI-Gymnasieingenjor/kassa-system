@@ -1,4 +1,4 @@
-# KassaSystem
+# kassa-system
 
 ## Development Environment Standard
 Visual Studio 2019
