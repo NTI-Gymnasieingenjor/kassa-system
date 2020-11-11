@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using kassa_system;
 using NUnit.Extensions.Forms;
 using NUnit.Framework;
 
-namespace kassa_system
+namespace kassaSystem
 {
     [TestFixture]
     class Tests

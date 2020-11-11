@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kassa-system", "kassa-system\kassa-system.csproj", "{A8EE4DDF-1FC9-4E27-BCB5-8F1AC650C723}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kassaSystem", "kassa-system\kassaSystem.csproj", "{A8EE4DDF-1FC9-4E27-BCB5-8F1AC650C723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
