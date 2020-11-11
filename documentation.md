@@ -18,10 +18,9 @@ You also need to add refrences to your project <br>
 
 
 ### Create A New Test File
-ADD > CLASS...
-To make a new test file 
+To make a new test file:
 
-On the right handside rightclick on **kassaSystem**, hover over **Add** and at the bottom of the list click on **Class...**
+On the right handside, rightclick on **kassaSystem**, hover over **Add** and at the bottom of the list click on **Class...**
 
 At the top of your new file you will need to add these two lines:
 ```
