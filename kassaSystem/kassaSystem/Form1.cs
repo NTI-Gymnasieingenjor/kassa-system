@@ -16,5 +16,12 @@ namespace kassaSystem
         {
             InitializeComponent();
         }
+
+        private void btnBulle_Click(object sender, EventArgs e)
+        {
+            var summa = int.Parse(this.tbxSumma.Text);
+            summa += 10;
+            this.tbxSumma.Text = summa.ToString();
+        }
     }
 }
