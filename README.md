@@ -7,7 +7,8 @@ Visual Studio 2019
 - C#
     
 ## Coding Standard
-- camelCase - variables, methods, classes <br>
+- Classes - PascalCase <br>
+- Variables, methods - camelCase <br>
 - Comments above the code <br>
 - **Filename Structure:** camelCase
     
