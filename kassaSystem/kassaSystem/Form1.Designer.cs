@@ -1,4 +1,4 @@
-﻿namespace kassa_system
+﻿namespace kassaSystem
 {
     partial class Form1
     {

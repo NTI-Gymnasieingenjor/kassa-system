@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8EE4DDF-1FC9-4E27-BCB5-8F1AC650C723}</ProjectGuid>
+    <ProjectGuid>{6CE3DE0E-3E7B-4F46-BD12-AC85496992BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>kassa_system</RootNamespace>
-    <AssemblyName>kassa-system</AssemblyName>
+    <RootNamespace>kassaSystem</RootNamespace>
+    <AssemblyName>kassaSystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,7 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="NUnitForms, Version=2.0.2327.4786, Culture=neutral, PublicKeyToken=eba0990a10412e0e, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />

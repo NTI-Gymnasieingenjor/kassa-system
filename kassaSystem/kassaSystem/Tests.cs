@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using kassa_system;
+using System.Windows.Forms;
 using NUnit.Extensions.Forms;
 using NUnit.Framework;
 
@@ -22,11 +22,10 @@ namespace kassaSystem
             form.Show();
         }
 
-
-
         [Test]
-        public void TestBulle() 
+        public void BulleButtonTest()
         {
+
             // Looks for the tbxSumma element and btnBulle element
             ControlTester tbxSumma = new ControlTester("tbxSumma");
             ButtonTester btnBulle = new ButtonTester("btnBulle");
@@ -40,7 +39,7 @@ namespace kassaSystem
             Assert.AreEqual("10", tbxSumma.Text);
 
             Assert.AreEqual("Bulle", btnBulle.Text);
+
         }
-        
     }
 }
