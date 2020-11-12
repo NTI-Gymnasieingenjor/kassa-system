@@ -41,6 +41,20 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestAddTwoBulle()
+        {
+            // Gets elements from form
+            ButtonTester buttonBulle = new ButtonTester("btnBulle", "Form1");
+            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "Form1");
+
+            buttonBulle.Click();
+            buttonBulle.Click();
+
+            // Checks if tbxSumma text is equal to 20 after button click
+            Assert.AreEqual("20", textboxSumma.Text);
+        }
+
+        [Test]
         public void TestStartingSummaIsZero()
         {
             // Gets element from form
