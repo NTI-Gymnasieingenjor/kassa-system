@@ -25,5 +25,7 @@
 - The code must be commented and documented when needed.
 - All code must pass their respective tests.
 - All members in the group must understand the code and approve the push.
+- The code must be merged to main.
+- Presentable.
 
 
