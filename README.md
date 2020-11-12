@@ -3,9 +3,15 @@
 ## Development Environment Standard
 Visual Studio 2019
 
-## Programming Language:
+## Programming Languages:
 - C#
-    
+
+### Frameworks
+   
+- .NET Framework 4.7.2
+- NUnit Framework
+    - NUnitForms
+   
 ## Coding Standard
 - Classes - PascalCase <br>
 - Variables, methods - camelCase <br>
