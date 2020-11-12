@@ -16,5 +16,10 @@ namespace kassaSystem
             summa += 10;
             this.textboxSumma.Text = summa.ToString();
         }
+
+        private void buttonNollstall_Click(object sender, EventArgs e)
+        {
+            textboxSumma.Text = "0";
+        }
     }
 }
