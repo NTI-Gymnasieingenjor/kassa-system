@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace kassaSystem
 {
     [TestFixture]
-    class KassaSystemTests
+    class KassaSystemTests : KassaSystem
     {
         KassaSystem form;
 
@@ -37,7 +37,7 @@ namespace kassaSystem
             buttonBulle.Click();
 
             // Checks if text is correct
-            Assert.AreEqual("10", textboxSumma.Text);
+            Assert.AreEqual(prisBulle, textboxSumma.Text);
         }
 
         [Test]
@@ -50,8 +50,39 @@ namespace kassaSystem
             buttonBulle.Click();
             buttonBulle.Click();
 
+            int prisBulleDoubled = int.Parse(prisBulle) * 2;
+
             // Checks if text is correct
-            Assert.AreEqual("20", textboxSumma.Text);
+            Assert.AreEqual(prisBulleDoubled.ToString(), textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddKaffe()
+        {
+            // Gets elements from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKaffe.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKaffe, textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddTwoKaffe()
+        {
+            // Gets elements from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKaffe.Click();
+            buttonKaffe.Click();
+
+            int prisKaffeDoubled = int.Parse(prisKaffe) * 2;
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKaffeDoubled.ToString(), textboxSumma.Text);
         }
 
         [Test]
@@ -88,6 +119,16 @@ namespace kassaSystem
 
             // Checks if text is correct
             Assert.AreEqual("Bulle", buttonBulle.Text);
+        }
+
+        [Test]
+        public void TestCheckKaffeText()
+        {
+            // Gets element from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Kaffe", buttonKaffe.Text);
         }
 
         [Test]
