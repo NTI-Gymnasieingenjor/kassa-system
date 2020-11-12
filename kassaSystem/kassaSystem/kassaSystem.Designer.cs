@@ -1,6 +1,6 @@
 ﻿namespace kassaSystem
 {
-    partial class Form1
+    partial class KassaSystem
     {
         /// <summary>
         /// Required designer variable.

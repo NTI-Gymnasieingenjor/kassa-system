@@ -6,14 +6,14 @@ namespace kassaSystem
     [TestFixture]
     class KassaSystemTests
     {
-        Form1 form;
+        KassaSystem form;
 
         // Runs at the start of every test
         [SetUp]
         public void SetUp()
         {
             // Starts the program
-            form = new Form1();
+            form = new KassaSystem();
 
             // Needed for the form the be tested
             form.Show();

@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace kassaSystem
 {
-    public partial class Form1 : Form
+    public partial class KassaSystem : Form
     {
-        public Form1()
+        public KassaSystem()
         {
             InitializeComponent();
         }
