@@ -55,6 +55,22 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestIfResetButtonResetsSumma()
+        {
+            // Gets elements from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonBulle.Click();
+
+            buttonNollstall.Click();
+
+            // Checks if textboxSumma text is equal to 0 after button click
+            Assert.AreEqual("0", textboxSumma.Text);
+        }
+
+        [Test]
         public void TestStartingSummaIsZero()
         {
             // Gets element from form
@@ -72,6 +88,16 @@ namespace kassaSystem
 
             // Checks if buttonBulle text is Bulle
             Assert.AreEqual("Bulle", buttonBulle.Text);
+        }
+
+        [Test]
+        public void TestCheckNollstallText()
+        {
+            // Gets element from form
+            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
+
+            // Checks if buttonNollstall text is Nollställ
+            Assert.AreEqual("Nollställ", buttonNollstall.Text);
         }
     }
 }
