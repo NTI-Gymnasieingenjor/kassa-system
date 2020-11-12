@@ -1,4 +1,4 @@
-# kassa-system
+# Kassasystem
 
 ## Development Environment Standard
 
