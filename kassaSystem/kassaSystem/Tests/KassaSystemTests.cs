@@ -32,7 +32,7 @@ namespace kassaSystem
         {
             // Gets elements from form
             ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
 
             buttonBulle.Click();
 
@@ -45,7 +45,7 @@ namespace kassaSystem
         {
             // Gets elements from form
             ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
 
             buttonBulle.Click();
             buttonBulle.Click();
@@ -58,7 +58,7 @@ namespace kassaSystem
         public void TestStartingSummaIsZero()
         {
             // Gets element from form
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
 
             // Checks if tbxSumma text is equal to 0
             Assert.AreEqual("0", textboxSumma.Text);

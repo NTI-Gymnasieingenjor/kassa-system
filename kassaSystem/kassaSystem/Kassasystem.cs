@@ -12,9 +12,9 @@ namespace kassaSystem
 
         private void buttonBulle_Click(object sender, EventArgs e)
         {
-            var summa = int.Parse(this.tbxSumma.Text);
+            var summa = int.Parse(this.textboxSumma.Text);
             summa += 10;
-            this.tbxSumma.Text = summa.ToString();
+            this.textboxSumma.Text = summa.ToString();
         }
     }
 }

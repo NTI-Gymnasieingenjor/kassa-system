@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonBulle = new System.Windows.Forms.Button();
-            this.tbxSumma = new System.Windows.Forms.TextBox();
+            this.textboxSumma = new System.Windows.Forms.TextBox();
             this.lblSumma = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -44,13 +44,13 @@
             this.buttonBulle.UseVisualStyleBackColor = true;
             this.buttonBulle.Click += new System.EventHandler(this.buttonBulle_Click);
             // 
-            // tbxSumma
+            // textboxSumma
             // 
-            this.tbxSumma.Location = new System.Drawing.Point(356, 546);
-            this.tbxSumma.Name = "tbxSumma";
-            this.tbxSumma.Size = new System.Drawing.Size(737, 24);
-            this.tbxSumma.TabIndex = 1;
-            this.tbxSumma.Text = "0";
+            this.textboxSumma.Location = new System.Drawing.Point(356, 546);
+            this.textboxSumma.Name = "textboxSumma";
+            this.textboxSumma.Size = new System.Drawing.Size(737, 24);
+            this.textboxSumma.TabIndex = 1;
+            this.textboxSumma.Text = "0";
             // 
             // lblSumma
             // 
@@ -67,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 801);
             this.Controls.Add(this.lblSumma);
-            this.Controls.Add(this.tbxSumma);
+            this.Controls.Add(this.textboxSumma);
             this.Controls.Add(this.buttonBulle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -81,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonBulle;
-        private System.Windows.Forms.TextBox tbxSumma;
+        private System.Windows.Forms.TextBox textboxSumma;
         private System.Windows.Forms.Label lblSumma;
     }
 }
