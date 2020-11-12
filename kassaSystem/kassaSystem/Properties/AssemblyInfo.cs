@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("kassa-system")]
+[assembly: AssemblyTitle("kassaSystem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("kassa-system")]
+[assembly: AssemblyProduct("kassaSystem")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a8ee4ddf-1fc9-4e27-bcb5-8f1ac650c723")]
+[assembly: Guid("6ce3de0e-3e7b-4f46-bd12-ac85496992bf")]
 
 // Version information for an assembly consists of the following four values:
 //

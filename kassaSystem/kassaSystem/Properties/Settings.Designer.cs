@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kassa_system.Properties
+namespace kassaSystem.Properties
 {
 
 
