@@ -1,7 +1,14 @@
 # kassa-system
 
 ## Development Environment Standard
-Visual Studio 2019
+
+- **Branch Name Structure:** snake_case
+
+### Programs
+- Visual Studio 2019
+
+
+
 
 ## Programming Languages:
 - C#
@@ -13,10 +20,11 @@ Visual Studio 2019
     - NUnitForms
    
 ## Coding Standard
-- Classes - PascalCase <br>
-- Variables, methods - camelCase <br>
-- Comments above the code <br>
+- **Code Name Structure:**
+   - Classes - PascalCase
+   - Variables, methods - camelCase
 - **Filename Structure:** camelCase
+- Comments above the code
     
 ## Definition of Done
 - The code must be commented and documented when needed
