@@ -1,26 +1,34 @@
-# kassa-system
+# Kassasystem
+
+## Product
+You can download the finished product [here](https://github.com/NTI-Gymnasieingenjor/kassa-system/raw/main/kassaSystem.zip).
 
 ## Development Environment Standard
-Visual Studio 2019
+- **Branch Name Structure:** snake_case
+
+### Programs
+- Visual Studio 2019
 
 ## Programming Languages:
 - C#
 
-### Frameworks
-   
+### Frameworks   
 - .NET Framework 4.7.2
 - NUnit Framework
     - NUnitForms
    
 ## Coding Standard
-- Classes - PascalCase <br>
-- Variables, methods - camelCase <br>
-- Comments above the code <br>
+- **Code Name Structure:**
+   - Classes - PascalCase
+   - Variables, methods - camelCase
 - **Filename Structure:** camelCase
+- Comments above the code
     
 ## Definition of Done
-- The code must be commented and documented when needed
-- All code must pass their respective tests
-- All members in the group must understand the code and approve the push
+- The code must be commented and documented when needed.
+- All code must pass their respective tests.
+- All members in the group must understand the code and approve the push.
+- The code must be merged to main.
+- Presentable.
 
 
