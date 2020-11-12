@@ -24,5 +24,12 @@ namespace kassaSystem
         {
             textboxSumma.Text = "0";
         }
+
+        private void buttonKaffe_Click(object sender, EventArgs e)
+        {
+            var summa = int.Parse(this.textboxSumma.Text);
+            summa += int.Parse(prisKaffe);
+            this.textboxSumma.Text = summa.ToString();
+        }
     }
 }

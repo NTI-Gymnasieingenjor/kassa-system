@@ -50,6 +50,7 @@ namespace kassaSystem
             buttonBulle.Click();
             buttonBulle.Click();
 
+            // Converts string to int and multiplies it by 2
             int prisBulleDoubled = int.Parse(prisBulle) * 2;
 
             // Checks if text is correct
@@ -79,6 +80,7 @@ namespace kassaSystem
             buttonKaffe.Click();
             buttonKaffe.Click();
 
+            // Converts string to int and multiplies it by 2
             int prisKaffeDoubled = int.Parse(prisKaffe) * 2;
 
             // Checks if text is correct
