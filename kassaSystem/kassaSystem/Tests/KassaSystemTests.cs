@@ -73,15 +73,5 @@ namespace kassaSystem
             // Checks if btnBulle text is Bulle
             Assert.AreEqual("Bulle", buttonBulle.Text);
         }
-
-        [Test]
-        public void TestCheckNollstallText()
-        {
-            // Gets element from form
-            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
-
-            // Checks if buttonNollstall text is Nollställ
-            Assert.AreEqual("Nollställ", buttonNollstall.Text);
-        }
     }
 }
