@@ -32,15 +32,16 @@
             this.textboxSumma = new System.Windows.Forms.TextBox();
             this.lblSumma = new System.Windows.Forms.Label();
             this.buttonNollstall = new System.Windows.Forms.Button();
+            this.buttonKaffe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBulle
             // 
             this.buttonBulle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBulle.Location = new System.Drawing.Point(356, 180);
+            this.buttonBulle.Location = new System.Drawing.Point(357, 236);
             this.buttonBulle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBulle.Name = "buttonBulle";
-            this.buttonBulle.Size = new System.Drawing.Size(737, 320);
+            this.buttonBulle.Size = new System.Drawing.Size(365, 259);
             this.buttonBulle.TabIndex = 0;
             this.buttonBulle.Text = "Bulle";
             this.buttonBulle.UseVisualStyleBackColor = true;
@@ -49,7 +50,7 @@
             // textboxSumma
             // 
             this.textboxSumma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxSumma.Location = new System.Drawing.Point(356, 546);
+            this.textboxSumma.Location = new System.Drawing.Point(357, 540);
             this.textboxSumma.Name = "textboxSumma";
             this.textboxSumma.Size = new System.Drawing.Size(596, 29);
             this.textboxSumma.TabIndex = 1;
@@ -58,7 +59,7 @@
             // lblSumma
             // 
             this.lblSumma.AutoSize = true;
-            this.lblSumma.Location = new System.Drawing.Point(353, 525);
+            this.lblSumma.Location = new System.Drawing.Point(354, 519);
             this.lblSumma.Name = "lblSumma";
             this.lblSumma.Size = new System.Drawing.Size(64, 18);
             this.lblSumma.TabIndex = 2;
@@ -66,19 +67,32 @@
             // 
             // buttonNollstall
             // 
-            this.buttonNollstall.Location = new System.Drawing.Point(958, 546);
+            this.buttonNollstall.Location = new System.Drawing.Point(959, 540);
             this.buttonNollstall.Name = "buttonNollstall";
-            this.buttonNollstall.Size = new System.Drawing.Size(135, 29);
+            this.buttonNollstall.Size = new System.Drawing.Size(136, 29);
             this.buttonNollstall.TabIndex = 3;
             this.buttonNollstall.Text = "Nollställ";
             this.buttonNollstall.UseVisualStyleBackColor = true;
             this.buttonNollstall.Click += new System.EventHandler(this.buttonNollstall_Click);
+            // 
+            // buttonKaffe
+            // 
+            this.buttonKaffe.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKaffe.Location = new System.Drawing.Point(730, 236);
+            this.buttonKaffe.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKaffe.Name = "buttonKaffe";
+            this.buttonKaffe.Size = new System.Drawing.Size(365, 259);
+            this.buttonKaffe.TabIndex = 4;
+            this.buttonKaffe.Text = "Kaffe";
+            this.buttonKaffe.UseVisualStyleBackColor = true;
+            this.buttonKaffe.Click += new System.EventHandler(this.buttonKaffe_Click);
             // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 801);
+            this.Controls.Add(this.buttonKaffe);
             this.Controls.Add(this.buttonNollstall);
             this.Controls.Add(this.lblSumma);
             this.Controls.Add(this.textboxSumma);
@@ -98,6 +112,7 @@
         private System.Windows.Forms.TextBox textboxSumma;
         private System.Windows.Forms.Label lblSumma;
         private System.Windows.Forms.Button buttonNollstall;
+        private System.Windows.Forms.Button buttonKaffe;
     }
 }
 
