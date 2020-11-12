@@ -36,7 +36,7 @@ namespace kassaSystem
 
             buttonBulle.Click();
 
-            // Checks if textboxSumma text is equal to 10 after button click
+            // Checks if text is correct
             Assert.AreEqual("10", textboxSumma.Text);
         }
 
@@ -50,7 +50,7 @@ namespace kassaSystem
             buttonBulle.Click();
             buttonBulle.Click();
 
-            // Checks if textboxSumma text is equal to 20 after button click
+            // Checks if text is correct
             Assert.AreEqual("20", textboxSumma.Text);
         }
 
@@ -66,7 +66,7 @@ namespace kassaSystem
 
             buttonNollstall.Click();
 
-            // Checks if textboxSumma text is equal to 0 after button click
+            // Checks if text is correct
             Assert.AreEqual("0", textboxSumma.Text);
         }
 
@@ -76,7 +76,7 @@ namespace kassaSystem
             // Gets element from form
             TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
 
-            // Checks if textboxSumma text is equal to 0
+            // Checks if text is correct
             Assert.AreEqual("0", textboxSumma.Text);
         }
 
@@ -86,7 +86,7 @@ namespace kassaSystem
             // Gets element from form
             ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
 
-            // Checks if buttonBulle text is Bulle
+            // Checks if text is correct
             Assert.AreEqual("Bulle", buttonBulle.Text);
         }
 
@@ -96,7 +96,7 @@ namespace kassaSystem
             // Gets element from form
             ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
 
-            // Checks if buttonNollstall text is Nollställ
+            // Checks if text is correct
             Assert.AreEqual("Nollställ", buttonNollstall.Text);
         }
     }
