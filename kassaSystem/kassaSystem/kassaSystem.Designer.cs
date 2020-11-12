@@ -36,6 +36,7 @@
             // 
             // buttonBulle
             // 
+            this.buttonBulle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBulle.Location = new System.Drawing.Point(356, 180);
             this.buttonBulle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBulle.Name = "buttonBulle";
