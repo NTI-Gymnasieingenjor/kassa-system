@@ -31,8 +31,8 @@ namespace kassaSystem
         public void TestAddBulle()
         {
             // Gets elements from form
-            ButtonTester buttonBulle = new ButtonTester("btnBulle", "Form1");
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "Form1");
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
 
             buttonBulle.Click();
 
@@ -44,8 +44,8 @@ namespace kassaSystem
         public void TestAddTwoBulle()
         {
             // Gets elements from form
-            ButtonTester buttonBulle = new ButtonTester("btnBulle", "Form1");
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "Form1");
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
 
             buttonBulle.Click();
             buttonBulle.Click();
@@ -58,7 +58,7 @@ namespace kassaSystem
         public void TestStartingSummaIsZero()
         {
             // Gets element from form
-            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "Form1");
+            TextBoxTester textboxSumma = new TextBoxTester("tbxSumma", "KassaSystem");
 
             // Checks if tbxSumma text is equal to 0
             Assert.AreEqual("0", textboxSumma.Text);
@@ -68,7 +68,7 @@ namespace kassaSystem
         public void TestCheckBulleText()
         {
             // Gets element from form
-            ButtonTester buttonBulle = new ButtonTester("btnBulle", "Form1");
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
 
             // Checks if btnBulle text is Bulle
             Assert.AreEqual("Bulle", buttonBulle.Text);

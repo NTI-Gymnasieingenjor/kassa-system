@@ -10,7 +10,7 @@ namespace kassaSystem
             InitializeComponent();
         }
 
-        private void btnBulle_Click(object sender, EventArgs e)
+        private void buttonBulle_Click(object sender, EventArgs e)
         {
             var summa = int.Parse(this.tbxSumma.Text);
             summa += 10;

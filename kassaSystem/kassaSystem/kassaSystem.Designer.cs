@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBulle = new System.Windows.Forms.Button();
+            this.buttonBulle = new System.Windows.Forms.Button();
             this.tbxSumma = new System.Windows.Forms.TextBox();
             this.lblSumma = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnBulle
+            // buttonBulle
             // 
-            this.btnBulle.Location = new System.Drawing.Point(356, 180);
-            this.btnBulle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBulle.Name = "btnBulle";
-            this.btnBulle.Size = new System.Drawing.Size(737, 320);
-            this.btnBulle.TabIndex = 0;
-            this.btnBulle.Text = "Bulle";
-            this.btnBulle.UseVisualStyleBackColor = true;
-            this.btnBulle.Click += new System.EventHandler(this.btnBulle_Click);
+            this.buttonBulle.Location = new System.Drawing.Point(356, 180);
+            this.buttonBulle.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBulle.Name = "buttonBulle";
+            this.buttonBulle.Size = new System.Drawing.Size(737, 320);
+            this.buttonBulle.TabIndex = 0;
+            this.buttonBulle.Text = "Bulle";
+            this.buttonBulle.UseVisualStyleBackColor = true;
+            this.buttonBulle.Click += new System.EventHandler(this.buttonBulle_Click);
             // 
             // tbxSumma
             // 
@@ -61,17 +61,17 @@
             this.lblSumma.TabIndex = 2;
             this.lblSumma.Text = "Summa:";
             // 
-            // Form1
+            // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 801);
             this.Controls.Add(this.lblSumma);
             this.Controls.Add(this.tbxSumma);
-            this.Controls.Add(this.btnBulle);
+            this.Controls.Add(this.buttonBulle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "KassaSystem";
             this.Text = "Kassasystem";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBulle;
+        private System.Windows.Forms.Button buttonBulle;
         private System.Windows.Forms.TextBox tbxSumma;
         private System.Windows.Forms.Label lblSumma;
     }
