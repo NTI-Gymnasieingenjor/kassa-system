@@ -109,6 +109,48 @@ namespace kassaSystem
             Assert.AreEqual("Kaffe", buttonKaffe.Text);
         }
 
+        // Korv Tests
+        [Test]
+        public void TestAddKorv()
+        {
+            // Gets elements from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKorv.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKorv, textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddTwoKorv()
+        {
+            // Gets elements from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKorv.Click();
+            buttonKorv.Click();
+
+            // Converts string to int and multiplies it by 2
+            int prisKorvDoubled = int.Parse(prisKorv) * 2;
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKorvDoubled.ToString(), textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestCheckKorvText()
+        {
+            // Gets element from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Korv", buttonKorv.Text);
+        }
+
+
         // Summa Tests
         [Test]
         public void TestIfResetButtonResetsSumma()
