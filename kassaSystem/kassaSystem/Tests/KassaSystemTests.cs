@@ -27,6 +27,7 @@ namespace kassaSystem
             form.Close();
         }
 
+        // Bulle Tests
         [Test]
         public void TestAddBulle()
         {
@@ -67,6 +68,7 @@ namespace kassaSystem
             Assert.AreEqual("Bulle", buttonBulle.Text);
         }
 
+        // Kaffe Tests
         [Test]
         public void TestAddKaffe()
         {
@@ -107,6 +109,7 @@ namespace kassaSystem
             Assert.AreEqual("Kaffe", buttonKaffe.Text);
         }
 
+        // Summa Tests
         [Test]
         public void TestIfResetButtonResetsSumma()
         {
@@ -133,6 +136,7 @@ namespace kassaSystem
             Assert.AreEqual("0", textboxSumma.Text);
         }
 
+        // Nollstall Tests
         [Test]
         public void TestCheckNollstallText()
         {
