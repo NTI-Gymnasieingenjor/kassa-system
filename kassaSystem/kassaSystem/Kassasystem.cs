@@ -10,7 +10,7 @@ namespace kassaSystem
             InitializeComponent();
         }
 
-        public string prisBulle = "10";
+        public string prisBulle = "12";
         public string prisKaffe = "5";
 
         private void buttonBulle_Click(object sender, EventArgs e)
