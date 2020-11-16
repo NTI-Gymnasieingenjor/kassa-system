@@ -1,0 +1,36 @@
+[1mdiff --git a/kassaSystem/kassaSystem/Tests/KassaSystemTests.cs b/kassaSystem/kassaSystem/Tests/KassaSystemTests.cs[m
+[1mindex 91bd2c0..8358586 100644[m
+[1m--- a/kassaSystem/kassaSystem/Tests/KassaSystemTests.cs[m
+[1m+++ b/kassaSystem/kassaSystem/Tests/KassaSystemTests.cs[m
+[36m@@ -27,6 +27,7 @@[m [mnamespace kassaSystem[m
+             form.Close();[m
+         }[m
+ [m
+[32m+[m[32m        // Bulle Tests[m
+         [Test][m
+         public void TestAddBulle()[m
+         {[m
+[36m@@ -67,6 +68,7 @@[m [mnamespace kassaSystem[m
+             Assert.AreEqual("Bulle", buttonBulle.Text);[m
+         }[m
+ [m
+[32m+[m[32m        // Kaffe Tests[m
+         [Test][m
+         public void TestAddKaffe()[m
+         {[m
+[36m@@ -107,6 +109,7 @@[m [mnamespace kassaSystem[m
+             Assert.AreEqual("Kaffe", buttonKaffe.Text);[m
+         }[m
+ [m
+[32m+[m[32m        // Summa Tests[m
+         [Test][m
+         public void TestIfResetButtonResetsSumma()[m
+         {[m
+[36m@@ -133,6 +136,7 @@[m [mnamespace kassaSystem[m
+             Assert.AreEqual("0", textboxSumma.Text);[m
+         }[m
+ [m
+[32m+[m[32m        // Nollstall Tests[m
+         [Test][m
+         public void TestCheckNollstallText()[m
+         {[m

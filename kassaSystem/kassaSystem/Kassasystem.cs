@@ -10,8 +10,10 @@ namespace kassaSystem
             InitializeComponent();
         }
 
-        public string prisBulle = "10";
+        public string prisBulle = "12";
         public string prisKaffe = "5";
+        public string prisKorv = "10";
+        public string prisLask = "18";
 
         private void buttonBulle_Click(object sender, EventArgs e)
         {
@@ -29,6 +31,20 @@ namespace kassaSystem
         {
             var summa = int.Parse(this.textboxSumma.Text);
             summa += int.Parse(prisKaffe);
+            this.textboxSumma.Text = summa.ToString();
+        }
+
+        private void buttonKorv_Click(object sender, EventArgs e)
+        {
+            var summa = int.Parse(this.textboxSumma.Text);
+            summa += int.Parse(prisKorv);
+            this.textboxSumma.Text = summa.ToString();
+        }
+
+        private void buttonLask_Click(object sender, EventArgs e)
+        {
+            var summa = int.Parse(this.textboxSumma.Text);
+            summa += int.Parse(prisLask);
             this.textboxSumma.Text = summa.ToString();
         }
     }

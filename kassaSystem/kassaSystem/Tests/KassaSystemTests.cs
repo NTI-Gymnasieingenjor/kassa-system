@@ -27,6 +27,7 @@ namespace kassaSystem
             form.Close();
         }
 
+        // Bulle Tests
         [Test]
         public void TestAddBulle()
         {
@@ -58,6 +59,17 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestCheckBulleText()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Bulle", buttonBulle.Text);
+        }
+
+        // Kaffe Tests
+        [Test]
         public void TestAddKaffe()
         {
             // Gets elements from form
@@ -88,6 +100,99 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestCheckKaffeText()
+        {
+            // Gets element from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Kaffe", buttonKaffe.Text);
+        }
+
+        // Korv Tests
+        [Test]
+        public void TestAddKorv()
+        {
+            // Gets elements from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKorv.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKorv, textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddTwoKorv()
+        {
+            // Gets elements from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonKorv.Click();
+            buttonKorv.Click();
+
+            // Converts string to int and multiplies it by 2
+            int prisKorvDoubled = int.Parse(prisKorv) * 2;
+
+            // Checks if text is correct
+            Assert.AreEqual(prisKorvDoubled.ToString(), textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestCheckKorvText()
+        {
+            // Gets element from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Korv", buttonKorv.Text);
+        }
+
+        // Läsk Tests
+        [Test]
+        public void TestAddLask()
+        {
+            // Gets elements from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonLask.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual(prisLask, textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddTwoLask()
+        {
+            // Gets elements from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonLask.Click();
+            buttonLask.Click();
+
+            // Converts string to int and multiplies it by 2
+            int prisLaskDoubled = int.Parse(prisLask) * 2;
+
+            // Checks if text is correct
+            Assert.AreEqual(prisLaskDoubled.ToString(), textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestCheckLaskText()
+        {
+            // Gets element from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Läsk", buttonLask.Text);
+        }
+
+        // Summa Tests
+        [Test]
         public void TestIfResetButtonResetsSumma()
         {
             // Gets elements from form
@@ -113,26 +218,7 @@ namespace kassaSystem
             Assert.AreEqual("0", textboxSumma.Text);
         }
 
-        [Test]
-        public void TestCheckBulleText()
-        {
-            // Gets element from form
-            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-
-            // Checks if text is correct
-            Assert.AreEqual("Bulle", buttonBulle.Text);
-        }
-
-        [Test]
-        public void TestCheckKaffeText()
-        {
-            // Gets element from form
-            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
-
-            // Checks if text is correct
-            Assert.AreEqual("Kaffe", buttonKaffe.Text);
-        }
-
+        // Nollstall Tests
         [Test]
         public void TestCheckNollstallText()
         {
