@@ -34,6 +34,7 @@
             this.buttonNollstall = new System.Windows.Forms.Button();
             this.buttonKaffe = new System.Windows.Forms.Button();
             this.buttonKorv = new System.Windows.Forms.Button();
+            this.buttonLask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBulle
@@ -100,11 +101,24 @@
             this.buttonKorv.UseVisualStyleBackColor = true;
             this.buttonKorv.Click += new System.EventHandler(this.buttonKorv_Click);
             // 
+            // buttonLask
+            // 
+            this.buttonLask.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLask.Location = new System.Drawing.Point(730, 228);
+            this.buttonLask.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLask.Name = "buttonLask";
+            this.buttonLask.Size = new System.Drawing.Size(365, 130);
+            this.buttonLask.TabIndex = 6;
+            this.buttonLask.Text = "Läsk";
+            this.buttonLask.UseVisualStyleBackColor = true;
+            this.buttonLask.Click += new System.EventHandler(this.buttonLask_Click);
+            // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 801);
+            this.Controls.Add(this.buttonLask);
             this.Controls.Add(this.buttonKorv);
             this.Controls.Add(this.buttonKaffe);
             this.Controls.Add(this.buttonNollstall);
@@ -128,6 +142,7 @@
         private System.Windows.Forms.Button buttonNollstall;
         private System.Windows.Forms.Button buttonKaffe;
         private System.Windows.Forms.Button buttonKorv;
+        private System.Windows.Forms.Button buttonLask;
     }
 }
 
