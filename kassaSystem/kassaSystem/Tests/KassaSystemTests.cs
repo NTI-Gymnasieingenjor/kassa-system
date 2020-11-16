@@ -150,6 +150,46 @@ namespace kassaSystem
             Assert.AreEqual("Korv", buttonKorv.Text);
         }
 
+        // Läsk Tests
+        [Test]
+        public void TestAddLask()
+        {
+            // Gets elements from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonLask.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual(prisLask, textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestAddTwoLask()
+        {
+            // Gets elements from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            buttonLask.Click();
+            buttonLask.Click();
+
+            // Converts string to int and multiplies it by 2
+            int prisLaskDoubled = int.Parse(prisLask) * 2;
+
+            // Checks if text is correct
+            Assert.AreEqual(prisLaskDoubled.ToString(), textboxSumma.Text);
+        }
+
+        [Test]
+        public void TestCheckLaskText()
+        {
+            // Gets element from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Läsk", buttonLask.Text);
+        }
 
         // Summa Tests
         [Test]
