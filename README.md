@@ -28,6 +28,7 @@ You can download the finished product [here](https://github.com/NTI-Gymnasieinge
 - The code must be commented and documented when needed.
 - All code must pass their respective tests.
 - All members in the group must understand the code and approve the push.
+- Features must be merged to main branch.
 - Presentable.
 
 
