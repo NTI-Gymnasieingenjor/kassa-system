@@ -58,6 +58,16 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestCheckBulleText()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Bulle", buttonBulle.Text);
+        }
+
+        [Test]
         public void TestAddKaffe()
         {
             // Gets elements from form
@@ -88,6 +98,16 @@ namespace kassaSystem
         }
 
         [Test]
+        public void TestCheckKaffeText()
+        {
+            // Gets element from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Kaffe", buttonKaffe.Text);
+        }
+
+        [Test]
         public void TestIfResetButtonResetsSumma()
         {
             // Gets elements from form
@@ -111,26 +131,6 @@ namespace kassaSystem
 
             // Checks if text is correct
             Assert.AreEqual("0", textboxSumma.Text);
-        }
-
-        [Test]
-        public void TestCheckBulleText()
-        {
-            // Gets element from form
-            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-
-            // Checks if text is correct
-            Assert.AreEqual("Bulle", buttonBulle.Text);
-        }
-
-        [Test]
-        public void TestCheckKaffeText()
-        {
-            // Gets element from form
-            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
-
-            // Checks if text is correct
-            Assert.AreEqual("Kaffe", buttonKaffe.Text);
         }
 
         [Test]
