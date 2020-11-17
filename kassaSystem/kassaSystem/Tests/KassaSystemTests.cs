@@ -191,9 +191,73 @@ namespace kassaSystem
             Assert.AreEqual("Läsk", buttonLask.Text);
         }
 
+        // Products list Tests
+        [Test]
+        public void TestAddBulleToList()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonBulle.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual("Bulle x1", listViewProdukter.Items[0].Text);
+        }
+
+        [Test]
+        public void TestAddKaffeToList()
+        {
+            // Gets element from form
+            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonKaffe.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual("Kaffe x1", listViewProdukter.Items[0].Text);
+        }
+
+        [Test]
+        public void TestAddKorvToList()
+        {
+            // Gets element from form
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonKorv.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual("Korv x1", listViewProdukter.Items[0].Text);
+        }
+
+        [Test]
+        public void TestAddLaskToList()
+        {
+            // Gets element from form
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonLask.Click();
+
+            // Checks if text is correct
+            Assert.AreEqual("Läsk x1", listViewProdukter.Items[0].Text);
+        }
+
         // Summa Tests
         [Test]
-        public void TestIfResetButtonResetsSumma()
+        public void TestStartingSummaIsZero()
+        {
+            // Gets element from form
+            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("0", textboxSumma.Text);
+        }
+
+        // Nollstall Tests
+        [Test]
+        public void TestIfNollstallButtonResetsSumma()
         {
             // Gets elements from form
             ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
@@ -209,16 +273,21 @@ namespace kassaSystem
         }
 
         [Test]
-        public void TestStartingSummaIsZero()
+        public void TestIfNollstallButtonResetsList()
         {
-            // Gets element from form
-            TextBoxTester textboxSumma = new TextBoxTester("textboxSumma", "KassaSystem");
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
 
-            // Checks if text is correct
-            Assert.AreEqual("0", textboxSumma.Text);
+            buttonBulle.Click();
+            buttonKorv.Click();
+
+            buttonNollstall.Click();
+
+            Assert.AreEqual(0, listViewProdukter.Items.Count);
         }
 
-        // Nollstall Tests
         [Test]
         public void TestCheckNollstallText()
         {
@@ -227,6 +296,21 @@ namespace kassaSystem
 
             // Checks if text is correct
             Assert.AreEqual("Nollställ", buttonNollstall.Text);
+        }
+
+        // Ta Bort Markerad Produkt Tests
+        [Test]
+        public void TestIfTaBortButtonRemovesMarkedProduct()
+        {
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonTaBort = new ButtonTester("buttonTaBort", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonBulle.Click();
+            listViewProdukter.Items[0].Focused = true;
+            buttonTaBort.Click();
+
+            Assert.AreEqual("0", listViewProdukter.Items);
         }
     }
 }
