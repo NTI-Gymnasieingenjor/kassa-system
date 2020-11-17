@@ -45,6 +45,7 @@ namespace kassaSystem
         private void buttonNollstall_Click(object sender, EventArgs e)
         {
             textboxSumma.Text = "0";
+            listViewProdukter.Clear();
         }
 
         private void buttonKaffe_Click(object sender, EventArgs e)
@@ -114,6 +115,15 @@ namespace kassaSystem
                 var currentItem = listViewProdukter.FindItemWithText(productType);
                 currentItem.Text = productType + " x" + indexLask;
             }
+        }
+
+        private void buttonTaBort_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+            }
+            catch { }
         }
     }
 }
