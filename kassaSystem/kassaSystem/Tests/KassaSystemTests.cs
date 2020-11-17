@@ -304,7 +304,7 @@ namespace kassaSystem
             buttonBulle.Click();
             buttonKaffe.Click();
             buttonKaffe.Click();
-            listViewProdukter.Items[1].Focused = true;
+            listViewProdukter.Items[1].Selected = true;
             buttonTaBort.Click();
 
             // Checks if price is correct
@@ -370,7 +370,7 @@ namespace kassaSystem
             buttonLask.Click();
             buttonKorv.Click();
             // Focuses on first item in list
-            listViewProdukter.Items[0].Focused = true;
+            listViewProdukter.Items[0].Selected = true;
             buttonTaBort.Click();
 
             // Checks if the right item is removed from the list
