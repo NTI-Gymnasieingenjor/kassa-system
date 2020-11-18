@@ -4,9 +4,14 @@ using NUnit.Framework;
 namespace kassaSystem
 {
     [TestFixture]
-    class KassaSystemTests : KassaSystem
+    class KassaSystemTests
     {
         KassaSystem form;
+
+        public string prisBulle = "12";
+        public string prisKaffe = "5";
+        public string prisKorv = "10";
+        public string prisLask = "18";
 
         // Runs at the start of every test
         [SetUp]
