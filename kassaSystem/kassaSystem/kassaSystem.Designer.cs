@@ -155,6 +155,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KassaSystem";
             this.Text = "Kassasystem";
+            this.Load += new System.EventHandler(this.KassaSystem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

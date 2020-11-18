@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace kassaSystem
 {
@@ -9,119 +10,89 @@ namespace kassaSystem
         {
             InitializeComponent();
         }
+        
+        Dictionary<string, int> productDictionary = new Dictionary<string, int>();
+        Dictionary<string, int> priceDictionary = new Dictionary<string, int>();
 
-        public string prisBulle = "12";
-        public string prisKaffe = "5";
-        public string prisKorv = "10";
-        public string prisLask = "18";
-
-        public int indexBulle;
-        public int indexKaffe;
-        public int indexKorv;
-        public int indexLask;
-        private void buttonBulle_Click(object sender, EventArgs e)
+        private void KassaSystem_Load(object sender, EventArgs e)
         {
-            var summa = int.Parse(this.textboxSumma.Text);
-            summa += int.Parse(prisBulle);
-            this.textboxSumma.Text = summa.ToString();
+            priceDictionary.Add("Bulle", 12);
+            priceDictionary.Add("Kaffe", 5);
+            priceDictionary.Add("Korv", 10);
+            priceDictionary.Add("Läsk", 18);
+        }
 
-            string productType = "Bulle";
-
-            // If list item doesn't exist, create list item
-            if (listViewProdukter.FindItemWithText(productType) == null)
-            {
-                indexBulle = 1;
-                listViewProdukter.Items.Add(productType + " x" + indexBulle);
+        private void addToCart(string product, int price)
+        {
+            if(productDictionary.ContainsKey(product))
+            {   
+                int tidigareAntal = productDictionary[product];
+                productDictionary[product] = tidigareAntal + 1;
+                // Gets the item with the specified text
+                var currentItem = listViewProdukter.FindItemWithText(product);
+                // productDictionary[product] gets the value from the product key
+                currentItem.Text = product + " x" + productDictionary[product];
             }
-            // Find list item and increase its value by 1
             else
             {
-                indexBulle += 1;
-                var currentItem = listViewProdukter.FindItemWithText(productType);
-                currentItem.Text = productType + " x" + indexBulle;
-            }   
+                // Adds item to dictionary with the key "product" and the value "1"
+                productDictionary.Add(product, 1);
+                listViewProdukter.Items.Add(product + " x" + productDictionary[product]);
+            }
+
+            var summa = int.Parse(this.textboxSumma.Text);
+            summa += price;
+            this.textboxSumma.Text = summa.ToString();
+        }
+
+        private void buttonBulle_Click(object sender, EventArgs e)
+        {
+            addToCart("Bulle", priceDictionary["Bulle"]);       
         }
 
         private void buttonNollstall_Click(object sender, EventArgs e)
         {
             textboxSumma.Text = "0";
             listViewProdukter.Clear();
+            productDictionary.Clear();
         }
 
         private void buttonKaffe_Click(object sender, EventArgs e)
         {
-            var summa = int.Parse(this.textboxSumma.Text);
-            summa += int.Parse(prisKaffe);
-            this.textboxSumma.Text = summa.ToString();
-
-            string productType = "Kaffe";
-
-            // If list item doesn't exist, create list item
-            if (listViewProdukter.FindItemWithText(productType) == null)
-            {
-                indexKaffe = 1;
-                listViewProdukter.Items.Add(productType + " x" + indexKaffe);
-            }
-            // Find list item and increase its value by 1
-            else
-            {
-                indexKaffe += 1;
-                var currentItem = listViewProdukter.FindItemWithText(productType);
-                currentItem.Text = productType + " x" + indexKaffe;
-            }
+            addToCart("Kaffe", priceDictionary["Kaffe"]);
         }
 
         private void buttonKorv_Click(object sender, EventArgs e)
         {
-            var summa = int.Parse(this.textboxSumma.Text);
-            summa += int.Parse(prisKorv);
-            this.textboxSumma.Text = summa.ToString();
-
-            string productType = "Korv";
-
-            // If list item doesn't exist, create list item
-            if (listViewProdukter.FindItemWithText(productType) == null)
-            {
-                indexKorv = 1;
-                listViewProdukter.Items.Add(productType + " x" + indexKorv);
-            }
-            // Find list item and increase its value by 1
-            else
-            {
-                indexKorv += 1;
-                var currentItem = listViewProdukter.FindItemWithText(productType);
-                currentItem.Text = productType + " x" + indexKorv;
-            }
+            addToCart("Korv", priceDictionary["Korv"]);
         }
 
         private void buttonLask_Click(object sender, EventArgs e)
         {
-            var summa = int.Parse(this.textboxSumma.Text);
-            summa += int.Parse(prisLask);
-            this.textboxSumma.Text = summa.ToString();
-
-            string productType = "Läsk";
-
-            // If list item doesn't exist, create list item
-            if (listViewProdukter.FindItemWithText(productType) == null)
-            {
-                indexLask = 1;
-                listViewProdukter.Items.Add(productType + " x" + indexLask);
-            }
-            // Find list item and increase its value by 1
-            else
-            {
-                indexLask += 1;
-                var currentItem = listViewProdukter.FindItemWithText(productType);
-                currentItem.Text = productType + " x" + indexLask;
-            }
+            addToCart("Läsk", priceDictionary["Läsk"]);
         }
 
         private void buttonTaBort_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
+                string input = listViewProdukter.SelectedItems[0].Text;
+                // Extracts product name from string
+                string productName = input.Substring(0, input.LastIndexOf(" "));
+                // Removes the specified key
+                productDictionary.Remove(productName);
                 listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+
+                // Extracts number of products specified after the x
+                // +1 is to skip the x
+                string productAmount = input.Substring(input.LastIndexOf("x") + 1); 
+
+                // Gets the price by multiplying the product amount with its price
+                int price = priceDictionary[productName] * int.Parse(productAmount);
+
+                var summa = int.Parse(this.textboxSumma.Text);
+                summa -= price;
+                this.textboxSumma.Text = summa.ToString();
             }
             catch { }
         }
