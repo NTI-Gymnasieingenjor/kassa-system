@@ -46,7 +46,7 @@
             this.buttonBulle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBulle.Name = "buttonBulle";
             this.buttonBulle.Size = new System.Drawing.Size(365, 167);
-            this.buttonBulle.TabIndex = 0;
+            this.buttonBulle.TabIndex = 2;
             this.buttonBulle.Text = "Bulle";
             this.buttonBulle.UseVisualStyleBackColor = true;
             this.buttonBulle.Click += new System.EventHandler(this.buttonBulle_Click);
@@ -58,7 +58,7 @@
             this.textboxSumma.Name = "textboxSumma";
             this.textboxSumma.ReadOnly = true;
             this.textboxSumma.Size = new System.Drawing.Size(246, 29);
-            this.textboxSumma.TabIndex = 1;
+            this.textboxSumma.TabIndex = 7;
             this.textboxSumma.Text = "0";
             // 
             // lblSumma
@@ -68,7 +68,7 @@
             this.lblSumma.Location = new System.Drawing.Point(906, 652);
             this.lblSumma.Name = "lblSumma";
             this.lblSumma.Size = new System.Drawing.Size(80, 24);
-            this.lblSumma.TabIndex = 2;
+            this.lblSumma.TabIndex = 8;
             this.lblSumma.Text = "Summa:";
             // 
             // buttonNollstall
@@ -76,7 +76,7 @@
             this.buttonNollstall.Location = new System.Drawing.Point(810, 679);
             this.buttonNollstall.Name = "buttonNollstall";
             this.buttonNollstall.Size = new System.Drawing.Size(94, 29);
-            this.buttonNollstall.TabIndex = 3;
+            this.buttonNollstall.TabIndex = 6;
             this.buttonNollstall.Text = "Nollställ";
             this.buttonNollstall.UseVisualStyleBackColor = true;
             this.buttonNollstall.Click += new System.EventHandler(this.buttonNollstall_Click);
@@ -100,7 +100,7 @@
             this.buttonKorv.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKorv.Name = "buttonKorv";
             this.buttonKorv.Size = new System.Drawing.Size(365, 167);
-            this.buttonKorv.TabIndex = 5;
+            this.buttonKorv.TabIndex = 1;
             this.buttonKorv.Text = "Korv";
             this.buttonKorv.UseVisualStyleBackColor = true;
             this.buttonKorv.Click += new System.EventHandler(this.buttonKorv_Click);
@@ -112,7 +112,7 @@
             this.buttonLask.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLask.Name = "buttonLask";
             this.buttonLask.Size = new System.Drawing.Size(365, 167);
-            this.buttonLask.TabIndex = 6;
+            this.buttonLask.TabIndex = 3;
             this.buttonLask.Text = "Läsk";
             this.buttonLask.UseVisualStyleBackColor = true;
             this.buttonLask.Click += new System.EventHandler(this.buttonLask_Click);
@@ -123,7 +123,7 @@
             this.listViewProdukter.Location = new System.Drawing.Point(910, 45);
             this.listViewProdukter.Name = "listViewProdukter";
             this.listViewProdukter.Size = new System.Drawing.Size(246, 543);
-            this.listViewProdukter.TabIndex = 7;
+            this.listViewProdukter.TabIndex = 0;
             this.listViewProdukter.TileSize = new System.Drawing.Size(200, 40);
             this.listViewProdukter.UseCompatibleStateImageBehavior = false;
             this.listViewProdukter.View = System.Windows.Forms.View.Tile;
@@ -133,7 +133,7 @@
             this.buttonTaBort.Location = new System.Drawing.Point(910, 594);
             this.buttonTaBort.Name = "buttonTaBort";
             this.buttonTaBort.Size = new System.Drawing.Size(246, 32);
-            this.buttonTaBort.TabIndex = 8;
+            this.buttonTaBort.TabIndex = 5;
             this.buttonTaBort.Text = "Ta bort markerad produkt";
             this.buttonTaBort.UseVisualStyleBackColor = true;
             this.buttonTaBort.Click += new System.EventHandler(this.buttonTaBort_Click);
