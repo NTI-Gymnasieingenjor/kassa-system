@@ -56,6 +56,7 @@
             this.textboxSumma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxSumma.Location = new System.Drawing.Point(910, 679);
             this.textboxSumma.Name = "textboxSumma";
+            this.textboxSumma.ReadOnly = true;
             this.textboxSumma.Size = new System.Drawing.Size(246, 29);
             this.textboxSumma.TabIndex = 1;
             this.textboxSumma.Text = "0";
