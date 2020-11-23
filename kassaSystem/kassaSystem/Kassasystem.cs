@@ -10,7 +10,7 @@ namespace kassaSystem
         {
             InitializeComponent();
         }
-        
+
         Dictionary<string, int> productDictionary = new Dictionary<string, int>();
         Dictionary<string, int> priceDictionary = new Dictionary<string, int>();
 
@@ -24,8 +24,8 @@ namespace kassaSystem
 
         private void addToCart(string product, int price)
         {
-            if(productDictionary.ContainsKey(product))
-            {   
+            if (productDictionary.ContainsKey(product))
+            {
                 int tidigareAntal = productDictionary[product];
                 productDictionary[product] = tidigareAntal + 1;
                 // Gets the item with the specified text
@@ -40,14 +40,24 @@ namespace kassaSystem
                 listViewProdukter.Items.Add(product + " x" + productDictionary[product]);
             }
 
-            var summa = int.Parse(this.textboxSumma.Text);
-            summa += price;
-            this.textboxSumma.Text = summa.ToString();
+            updateSumma();
+        }
+
+        private void updateSumma()
+        {
+            textboxSumma.Text = "0";
+            foreach (ListViewItem item in listViewProdukter.Items)
+            {
+                string productName = item.Text.Substring(0, item.Text.LastIndexOf(" "));
+                var summa = int.Parse(textboxSumma.Text);
+                summa += productDictionary[productName] * priceDictionary[productName];
+                textboxSumma.Text = summa.ToString();
+            }
         }
 
         private void buttonBulle_Click(object sender, EventArgs e)
         {
-            addToCart("Bulle", priceDictionary["Bulle"]);       
+            addToCart("Bulle", priceDictionary["Bulle"]);
         }
 
         private void buttonNollstall_Click(object sender, EventArgs e)
@@ -85,14 +95,12 @@ namespace kassaSystem
 
                 // Extracts number of products specified after the x
                 // +1 is to skip the x
-                string productAmount = input.Substring(input.LastIndexOf("x") + 1); 
+                string productAmount = input.Substring(input.LastIndexOf("x") + 1);
 
                 // Gets the price by multiplying the product amount with its price
                 int price = priceDictionary[productName] * int.Parse(productAmount);
 
-                var summa = int.Parse(this.textboxSumma.Text);
-                summa -= price;
-                this.textboxSumma.Text = summa.ToString();
+                updateSumma();
             }
             catch { }
         }
