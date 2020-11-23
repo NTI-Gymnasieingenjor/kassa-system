@@ -30,7 +30,7 @@
         {
             this.buttonBulle = new System.Windows.Forms.Button();
             this.textboxSumma = new System.Windows.Forms.TextBox();
-            this.lblSumma = new System.Windows.Forms.Label();
+            this.labelSumma = new System.Windows.Forms.Label();
             this.buttonNollstall = new System.Windows.Forms.Button();
             this.buttonKaffe = new System.Windows.Forms.Button();
             this.buttonKorv = new System.Windows.Forms.Button();
@@ -61,15 +61,15 @@
             this.textboxSumma.TabIndex = 7;
             this.textboxSumma.Text = "0";
             // 
-            // lblSumma
+            // labelSumma
             // 
-            this.lblSumma.AutoSize = true;
-            this.lblSumma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSumma.Location = new System.Drawing.Point(906, 652);
-            this.lblSumma.Name = "lblSumma";
-            this.lblSumma.Size = new System.Drawing.Size(80, 24);
-            this.lblSumma.TabIndex = 8;
-            this.lblSumma.Text = "Summa:";
+            this.labelSumma.AutoSize = true;
+            this.labelSumma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSumma.Location = new System.Drawing.Point(906, 652);
+            this.labelSumma.Name = "labelSumma";
+            this.labelSumma.Size = new System.Drawing.Size(80, 24);
+            this.labelSumma.TabIndex = 8;
+            this.labelSumma.Text = "Summa:";
             // 
             // buttonNollstall
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.buttonKorv);
             this.Controls.Add(this.buttonKaffe);
             this.Controls.Add(this.buttonNollstall);
-            this.Controls.Add(this.lblSumma);
+            this.Controls.Add(this.labelSumma);
             this.Controls.Add(this.textboxSumma);
             this.Controls.Add(this.buttonBulle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,7 +166,7 @@
 
         private System.Windows.Forms.Button buttonBulle;
         private System.Windows.Forms.TextBox textboxSumma;
-        private System.Windows.Forms.Label lblSumma;
+        private System.Windows.Forms.Label labelSumma;
         private System.Windows.Forms.Button buttonNollstall;
         private System.Windows.Forms.Button buttonKaffe;
         private System.Windows.Forms.Button buttonKorv;
