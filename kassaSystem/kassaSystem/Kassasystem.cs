@@ -55,9 +55,9 @@ namespace kassaSystem
             }
         }
 
-        private void buttonBulle_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            addToCart("Bulle", priceDictionary["Bulle"]);
+            addToCart((sender as Button).Text, priceDictionary[(sender as Button).Text]);
         }
 
         private void buttonNollstall_Click(object sender, EventArgs e)
@@ -65,21 +65,6 @@ namespace kassaSystem
             textboxSumma.Text = "0";
             listViewProdukter.Clear();
             productDictionary.Clear();
-        }
-
-        private void buttonKaffe_Click(object sender, EventArgs e)
-        {
-            addToCart("Kaffe", priceDictionary["Kaffe"]);
-        }
-
-        private void buttonKorv_Click(object sender, EventArgs e)
-        {
-            addToCart("Korv", priceDictionary["Korv"]);
-        }
-
-        private void buttonLask_Click(object sender, EventArgs e)
-        {
-            addToCart("Läsk", priceDictionary["Läsk"]);
         }
 
         private void buttonTaBort_Click(object sender, EventArgs e)

@@ -49,7 +49,7 @@
             this.buttonBulle.TabIndex = 2;
             this.buttonBulle.Text = "Bulle";
             this.buttonBulle.UseVisualStyleBackColor = true;
-            this.buttonBulle.Click += new System.EventHandler(this.buttonBulle_Click);
+            this.buttonBulle.Click += new System.EventHandler(this.button_Click);
             // 
             // textboxSumma
             // 
@@ -91,7 +91,7 @@
             this.buttonKaffe.TabIndex = 4;
             this.buttonKaffe.Text = "Kaffe";
             this.buttonKaffe.UseVisualStyleBackColor = true;
-            this.buttonKaffe.Click += new System.EventHandler(this.buttonKaffe_Click);
+            this.buttonKaffe.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonKorv
             // 
@@ -103,7 +103,7 @@
             this.buttonKorv.TabIndex = 1;
             this.buttonKorv.Text = "Korv";
             this.buttonKorv.UseVisualStyleBackColor = true;
-            this.buttonKorv.Click += new System.EventHandler(this.buttonKorv_Click);
+            this.buttonKorv.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonLask
             // 
@@ -115,7 +115,7 @@
             this.buttonLask.TabIndex = 3;
             this.buttonLask.Text = "Läsk";
             this.buttonLask.UseVisualStyleBackColor = true;
-            this.buttonLask.Click += new System.EventHandler(this.buttonLask_Click);
+            this.buttonLask.Click += new System.EventHandler(this.button_Click);
             // 
             // listViewProdukter
             // 
