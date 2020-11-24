@@ -178,5 +178,44 @@ namespace kassaSystem
             // Checks if the right item is removed from the list
             Assert.AreNotEqual("Bulle x1", listViewProdukter.Items[0].Text);
         }
+
+        [Test]
+        public void TestIfTaBort1xButtonRemovesMarkedProduct()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            ButtonTester buttonTaBort1x = new ButtonTester("buttonTaBort1x", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonBulle.Click();
+            buttonLask.Click();
+            buttonKorv.Click();
+            // Focuses on first item in list
+            listViewProdukter.Items[0].Selected = true;
+            buttonTaBort1x.Click();
+
+            // Checks if the right item is removed from the list
+            Assert.AreNotEqual("Bulle x1", listViewProdukter.Items[0].Text);
+        }
+        [Test]
+        public void TestIfTaBort1xButtonRemovesOneProduct()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonTaBort1x = new ButtonTester("buttonTaBort1x", "KassaSystem");
+            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
+
+            buttonBulle.Click();
+            buttonBulle.Click();
+            buttonBulle.Click();
+            // Focuses on first item in list
+            listViewProdukter.Items[0].Selected = true;
+            buttonTaBort1x.Click();
+
+            // Checks if the right item is removed from the list
+            Assert.AreEqual("Bulle x2", listViewProdukter.Items[0].Text);
+        }
     }
 }
