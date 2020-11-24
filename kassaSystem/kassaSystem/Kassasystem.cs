@@ -67,27 +67,60 @@ namespace kassaSystem
             productDictionary.Clear();
         }
 
-        private void buttonTaBort_Click(object sender, EventArgs e)
+        private void toggleOnSelect()
         {
-            try
+            // Enables buttons when one item is selected
+            if (listViewProdukter.SelectedItems.Count == 1)
             {
-                string input = listViewProdukter.SelectedItems[0].Text;
-                // Extracts product name from string
-                string productName = input.Substring(0, input.LastIndexOf(" "));
-                // Removes the specified key
+                buttonTaBort.Enabled = true;
+                buttonTaBort1x.Enabled = true;
+            }
+
+            // Disables buttons when more than 1 or no buttons are selected
+            else
+            {
+                buttonTaBort.Enabled = false;
+                buttonTaBort1x.Enabled = false;
+            }
+        }
+
+        private void buttonTaBort1x_Click(object sender, EventArgs e)
+        {
+            string input = listViewProdukter.SelectedItems[0].Text;
+            // Extracts product name from string
+            string productName = input.Substring(0, input.LastIndexOf(" "));
+
+            productDictionary[productName] -= 1;
+
+            var currentItem = listViewProdukter.FindItemWithText(productName);
+            currentItem.Text = productName + " x" + productDictionary[productName];
+
+            if (productDictionary[productName] == 0)
+            {
                 productDictionary.Remove(productName);
                 listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
-
-                // Extracts number of products specified after the x
-                // +1 is to skip the x
-                string productAmount = input.Substring(input.LastIndexOf("x") + 1);
-
-                // Gets the price by multiplying the product amount with its price
-                int price = priceDictionary[productName] * int.Parse(productAmount);
-
-                updateSumma();
             }
-            catch { }
+
+            updateSumma();
+        }
+
+        private void buttonTaBort_Click(object sender, EventArgs e)
+        {
+            string input = listViewProdukter.SelectedItems[0].Text;
+            // Extracts product name from string
+            string productName = input.Substring(0, input.LastIndexOf(" "));
+
+            // Removes the specified key
+            productDictionary.Remove(productName);
+            listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+
+            updateSumma();
+        }
+
+        // Calls toggleOnSelect when selection state in list changes
+        private void listViewProdukter_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            toggleOnSelect();
         }
     }
 }

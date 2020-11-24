@@ -37,6 +37,7 @@
             this.buttonLask = new System.Windows.Forms.Button();
             this.listViewProdukter = new System.Windows.Forms.ListView();
             this.buttonTaBort = new System.Windows.Forms.Button();
+            this.buttonTaBort1x = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBulle
@@ -127,22 +128,36 @@
             this.listViewProdukter.TileSize = new System.Drawing.Size(200, 40);
             this.listViewProdukter.UseCompatibleStateImageBehavior = false;
             this.listViewProdukter.View = System.Windows.Forms.View.Tile;
+            this.listViewProdukter.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewProdukter_ItemSelectionChanged);
             // 
             // buttonTaBort
             // 
-            this.buttonTaBort.Location = new System.Drawing.Point(910, 594);
+            this.buttonTaBort.Enabled = false;
+            this.buttonTaBort.Location = new System.Drawing.Point(1036, 594);
             this.buttonTaBort.Name = "buttonTaBort";
-            this.buttonTaBort.Size = new System.Drawing.Size(246, 32);
+            this.buttonTaBort.Size = new System.Drawing.Size(120, 32);
             this.buttonTaBort.TabIndex = 5;
-            this.buttonTaBort.Text = "Ta bort markerad produkt";
+            this.buttonTaBort.Text = "Ta bort produkt";
             this.buttonTaBort.UseVisualStyleBackColor = true;
             this.buttonTaBort.Click += new System.EventHandler(this.buttonTaBort_Click);
+            // 
+            // buttonTaBort1x
+            // 
+            this.buttonTaBort1x.Enabled = false;
+            this.buttonTaBort1x.Location = new System.Drawing.Point(910, 594);
+            this.buttonTaBort1x.Name = "buttonTaBort1x";
+            this.buttonTaBort1x.Size = new System.Drawing.Size(120, 32);
+            this.buttonTaBort1x.TabIndex = 9;
+            this.buttonTaBort1x.Text = "Ta bort 1x";
+            this.buttonTaBort1x.UseVisualStyleBackColor = true;
+            this.buttonTaBort1x.Click += new System.EventHandler(this.buttonTaBort1x_Click);
             // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 720);
+            this.Controls.Add(this.buttonTaBort1x);
             this.Controls.Add(this.buttonTaBort);
             this.Controls.Add(this.listViewProdukter);
             this.Controls.Add(this.buttonLask);
@@ -173,6 +188,7 @@
         private System.Windows.Forms.Button buttonLask;
         private System.Windows.Forms.ListView listViewProdukter;
         private System.Windows.Forms.Button buttonTaBort;
+        private System.Windows.Forms.Button buttonTaBort1x;
     }
 }
 
