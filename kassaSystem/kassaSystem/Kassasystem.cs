@@ -115,7 +115,6 @@ namespace kassaSystem
             listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
 
             updateSumma();
-            toggleOnSelect();
         }
 
         // Calls toggleOnSelect when selection state in list changes
