@@ -34,45 +34,6 @@ namespace kassaSystem
         }
 
         [Test]
-        public void TestAddKaffeToList()
-        {
-            // Gets element from form
-            ButtonTester buttonKaffe = new ButtonTester("buttonKaffe", "KassaSystem");
-            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
-
-            buttonKaffe.Click();
-
-            // Checks if text is correct
-            Assert.AreEqual("Kaffe x1", listViewProdukter.Items[0].Text);
-        }
-
-        [Test]
-        public void TestAddKorvToList()
-        {
-            // Gets element from form
-            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
-            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
-
-            buttonKorv.Click();
-
-            // Checks if text is correct
-            Assert.AreEqual("Korv x1", listViewProdukter.Items[0].Text);
-        }
-
-        [Test]
-        public void TestAddLaskToList()
-        {
-            // Gets element from form
-            ButtonTester buttonLask = new ButtonTester("buttonLask", "KassaSystem");
-            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
-
-            buttonLask.Click();
-
-            // Checks if text is correct
-            Assert.AreEqual("Läsk x1", listViewProdukter.Items[0].Text);
-        }
-
-        [Test]
         public void TestAddOneBulleThenOneKaffeAndOneBulleAgainToList()
         {
             // Gets element from form
