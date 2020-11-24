@@ -22,7 +22,7 @@ namespace kassaSystem
             priceDictionary.Add("Läsk", 18);
         }
 
-        private void addToCart(string product, int price)
+        private void addToCart(string product)
         {
             if (productDictionary.ContainsKey(product))
             {
@@ -57,7 +57,7 @@ namespace kassaSystem
 
         private void button_Click(object sender, EventArgs e)
         {
-            addToCart((sender as Button).Text, priceDictionary[(sender as Button).Text]);
+            addToCart((sender as Button).Text);
         }
 
         private void buttonNollstall_Click(object sender, EventArgs e)
