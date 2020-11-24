@@ -22,6 +22,8 @@ You can download the finished product [here](https://github.com/NTI-Gymnasieinge
    - Classes - PascalCase
    - Variables, methods - camelCase
 - **Filename Structure:** camelCase
+    - **Exceptions**: 
+        - Tests - PascalCase
 - Comments above the code
     
 ## Definition of Done
