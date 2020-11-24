@@ -22,6 +22,18 @@ namespace kassaSystem
             priceDictionary.Add("Läsk", 18);
         }
 
+        private void updateSumma()
+        {
+            textboxSumma.Text = "0";
+            foreach (ListViewItem item in listViewProdukter.Items)
+            {
+                string productName = item.Text.Substring(0, item.Text.LastIndexOf(" "));
+                var summa = int.Parse(textboxSumma.Text);
+                summa += productDictionary[productName] * priceDictionary[productName];
+                textboxSumma.Text = summa.ToString();
+            }
+        }
+
         private void addToCart(string product)
         {
             if (productDictionary.ContainsKey(product))
@@ -41,18 +53,6 @@ namespace kassaSystem
             }
 
             updateSumma();
-        }
-
-        private void updateSumma()
-        {
-            textboxSumma.Text = "0";
-            foreach (ListViewItem item in listViewProdukter.Items)
-            {
-                string productName = item.Text.Substring(0, item.Text.LastIndexOf(" "));
-                var summa = int.Parse(textboxSumma.Text);
-                summa += productDictionary[productName] * priceDictionary[productName];
-                textboxSumma.Text = summa.ToString();
-            }
         }
 
         private void button_Click(object sender, EventArgs e)
