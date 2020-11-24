@@ -102,7 +102,6 @@ namespace kassaSystem
             }
 
             updateSumma();
-            toggleOnSelect();
         }
 
         private void buttonTaBort_Click(object sender, EventArgs e)
