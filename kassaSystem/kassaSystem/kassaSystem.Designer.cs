@@ -128,9 +128,11 @@
             this.listViewProdukter.TileSize = new System.Drawing.Size(200, 40);
             this.listViewProdukter.UseCompatibleStateImageBehavior = false;
             this.listViewProdukter.View = System.Windows.Forms.View.Tile;
+            this.listViewProdukter.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewProdukter_ItemSelectionChanged);
             // 
             // buttonTaBort
             // 
+            this.buttonTaBort.Enabled = false;
             this.buttonTaBort.Location = new System.Drawing.Point(1036, 594);
             this.buttonTaBort.Name = "buttonTaBort";
             this.buttonTaBort.Size = new System.Drawing.Size(120, 32);
@@ -141,6 +143,7 @@
             // 
             // buttonTaBort1x
             // 
+            this.buttonTaBort1x.Enabled = false;
             this.buttonTaBort1x.Location = new System.Drawing.Point(910, 594);
             this.buttonTaBort1x.Name = "buttonTaBort1x";
             this.buttonTaBort1x.Size = new System.Drawing.Size(120, 32);
