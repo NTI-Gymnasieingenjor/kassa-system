@@ -67,6 +67,30 @@ namespace kassaSystem
             productDictionary.Clear();
         }
 
+        private void buttonTaBort1x_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string input = listViewProdukter.SelectedItems[0].Text;
+                // Extracts product name from string
+                string productName = input.Substring(0, input.LastIndexOf(" "));
+
+                productDictionary[productName] -= 1;
+
+                var currentItem = listViewProdukter.FindItemWithText(productName);
+                currentItem.Text = productName + " x" + productDictionary[productName];
+
+                if (productDictionary[productName] == 0)
+                {
+                    productDictionary.Remove(productName);
+                    listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+                }
+
+                updateSumma();
+            }
+            catch { }
+        }
+
         private void buttonTaBort_Click(object sender, EventArgs e)
         {
             try
@@ -74,16 +98,10 @@ namespace kassaSystem
                 string input = listViewProdukter.SelectedItems[0].Text;
                 // Extracts product name from string
                 string productName = input.Substring(0, input.LastIndexOf(" "));
+
                 // Removes the specified key
                 productDictionary.Remove(productName);
                 listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
-
-                // Extracts number of products specified after the x
-                // +1 is to skip the x
-                string productAmount = input.Substring(input.LastIndexOf("x") + 1);
-
-                // Gets the price by multiplying the product amount with its price
-                int price = priceDictionary[productName] * int.Parse(productAmount);
 
                 updateSumma();
             }
