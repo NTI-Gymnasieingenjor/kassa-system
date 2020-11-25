@@ -1,12 +1,28 @@
 # Documentation
 
 ## Putting out a new release
+
 ### Creating the EXE file
 **In Visual Studio 2019**
 1. On the right hand side inside the solution explorer, in solution tab for **kassaSystem**, right-click on the **kassaSystem** project and click **Build**.
 2. If the build succeeded the created exe file should now be located within the **kassaSystem\bin\Debug** directory.
 
 ### Creating the installer
+You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php) to run the scripts and make an installer.
+
+### Using an existing script
+
+### Creating a new script
+**In Inno Setup Compiler**
+1. Under **New File** select **Create a new script file using the Script Wizard** and then click OK.
+2. You will be prompted a Wizard hit Next to proceed.
+3. Here you will be able to enter general information about the application. <br>
+```
+Application Name: Kassasystem
+Application Version: The current version of the application (e.g 1.2.0)
+Application Publisher: Your company name (e.g poG & Company)
+Application Website: The website for the application
+```
 
 ### Putting out a new release
 
