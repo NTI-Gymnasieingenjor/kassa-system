@@ -20,24 +20,24 @@ You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php
 **Application Publisher**: Your company name (e.g poG & Company) <br>
 **Application Website**: The website for the application (You can leave this empty)
 <br> Click **Next** when you are done.
-4. In the next prompt you can change the default installation destination. You can leave this at default settings. <br> Click **Next** when you are done
+4. In the next prompt you can change the default install destination. You can leave this on default settings. <br> Click **Next** when you are done.
 5. Next you will need to browse for the application executable (Kassasystem.exe). You can find the executable in the **kassaSystem\kassaSystem\bin\Debug** directory. <br> If needed, you can add additional files and folders in the box below. <br> Click **Next** when you are done.
 6. In the next prompt you can choose a file extension type for the application. Turn this option off by default. <br> Click **Next** when you are done.
-7. Next prompt is about shortcuts for the installed application. Leave this as is by default. <br> Click **Next** when you are done.
-8. In the next prompt you can browse for a Lisence and information .txt files. <br> You can leave everything empty if you don't have any. Click **Next** when you are done.
-9. Afterwards you can choose if it will be an Adminstrive installation or not. Leave this as is by default. <br> Click **Next** when you are done.
+7. Next prompt is about shortcuts for the installed application. Leave this as it is by default. <br> Click **Next** when you are done.
+8. In the next prompt you can browse for a License and information txt files. <br> You can leave everything empty if you don't have any. <br> Click **Next** when you are done.
+9. Afterwards you can choose if it will be an Administrative installation or not. Leave this as it is by default. <br> Click **Next** when you are done.
 10. In the next prompt you can choose which languages will be included in the installation file. English is chosen by default. <br> Click **Next** when you are done.
-11. Next choose where you wish to save compiler file. Name it **"kassasystemsetup"** and select the default Kassasystem icon, which can be found in **kassaSystem\assets**. Leave password empty. <br> Click **Next** when you are done.
-12. Next you can choose whether you wish to have Inno Compilers #define directives. This is good for the future when you wish to edit the script so leaving it on is recommended. <br> Click **Next** when you are done.
+11. Next choose where you wish to save the compiler file. Name it **"kassasystemsetup"** and select the default Kassasystem icon, which can be found in **kassaSystem\assets**. Leave password empty. <br> Click **Next** when you are done.
+12. Next you can choose whether you wish to have *Inno Setup Compilers* #define directives. This is good for the future when you wish to edit the script so leaving it on is recommended. <br> Click **Next** when you are done.
 13. Finally you are at the last step! <br> Click **Finish**.
 
 #### Using an existing installer script
 **In Inno Setup Compiler**
-1. To the top left, click on the **File** tab and then click on **Open**.
-2. Browse for script file and open.
+1. In the top left, click on the **File** tab and then click on **Open**.
+2. Browse for the script file and open.
 
 #### Running the Compiler
-To run the compiler open up your script file in **Inno Setup Compiler** <br> press **CTRL + F9** to start compiling <br> then press **F9** to Run your new installation file.
+To run the compiler open up your script file in **Inno Setup Compiler** <br> press **CTRL + F9** to start compiling <br> then press **F9** to run your new installation file.
 
 ## Tests
 ### Prerequisites
