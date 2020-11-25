@@ -3,8 +3,8 @@
 ## Putting out a new release
 ### Creating the EXE file
 **In Visual Studio 2019**
-1. On the right hand side inside the solution explorer, in solution tab for **kassaSystem**, right-click on the **kassaSystem** project and click **Build**
-2. If the build succeeded the created exe file should now be located within the **kassaSystem\bin\Debug** directory
+1. On the right hand side inside the solution explorer, in solution tab for **kassaSystem**, right-click on the **kassaSystem** project and click **Build**.
+2. If the build succeeded the created exe file should now be located within the **kassaSystem\bin\Debug** directory.
 
 ### Creating the installer
 
@@ -14,7 +14,7 @@
 ## Tests
 ### Prerequisites
 **In Visual Studio 2019**
-1. On the right hand side right-click on **kassaSystem** and go into **Manage NuGet Packages...**
+1. On the right hand side right-click on **kassaSystem** and go into **Manage NuGet Packages...**.
 2. Select **Browse** tab and search for **NUnit** and download it.
 3. In the Menu bar select **Extensions** tab and go into **Manage Extensions**.
 4. In the left hand side panel go into **Online**, search for **NUnit 3 Test Adapter** and download.
@@ -22,10 +22,10 @@
 
 You also need to add refrences to your project <br>
 **In Visual Studio 2019**
-1. On the right hand side under **kassaSystem** right-click on **Refrences** and **Add Refrences...**
-2. In the left hand side panel go into **Assemblies** and search for **NUnit**
-3. In the list select **nunit.framework** and **NUnitForms**
-4. Click **OK**
+1. On the right hand side under **kassaSystem** right-click on **Refrences** and **Add Refrences...**.
+2. In the left hand side panel go into **Assemblies** and search for **NUnit**.
+3. In the list select **nunit.framework** and **NUnitForms**.
+4. Click **OK**.
 
 
 ### Create A New Test File
