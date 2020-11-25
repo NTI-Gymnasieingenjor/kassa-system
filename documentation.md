@@ -13,7 +13,7 @@ You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php
 ### Creating a new script
 **In Inno Setup Compiler**
 1. Under **New File** select **Create a new script file using the Script Wizard** and then click **OK.**
-2. You will be prompted a Wizard hit **Next** to proceed.
+2. You will be prompted a Setup Wizard hit **Next** to proceed.
 3. Here you will be able to enter general information about the application. <br><br>
 **Application Name**: Kassasystem <br>
 **Application Version**: The current version of the application <br>
