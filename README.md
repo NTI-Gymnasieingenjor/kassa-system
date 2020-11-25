@@ -1,7 +1,7 @@
 # Kassasystem
 
 ## Product
-You can download the finished product [here](https://github.com/NTI-Gymnasieingenjor/kassa-system/releases/latest/download/kassaSystem.zip). 
+You can download the latest release [here](https://github.com/NTI-Gymnasieingenjor/kassa-system/releases/latest/download/kassaSystem.zip). 
 
 ## Development Environment Standard
 - **Branch Name Structure:** snake_case
