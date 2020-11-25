@@ -37,9 +37,3 @@ You can download the latest release [here](https://github.com/NTI-Gymnasieingenj
 - All members in the group must understand the code and approve the push.
 - Features must be merged to main branch.
 - Presentable.
-
-### New Release
-- The new release must contain an msi file for installating the program
-    - The installation file must contain the option to create a desktop shortcut
-
-
