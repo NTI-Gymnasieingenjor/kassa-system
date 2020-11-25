@@ -6,6 +6,11 @@ You can download the finished product [here](https://github.com/NTI-Gymnasieinge
 ## Development Environment Standard
 - **Branch Name Structure:** snake_case
 
+### Documentation
+- **File Name Structure:** 
+    - File names should be expressed with backslashes and without spaces.
+    - **Example:** *"C:\Users\User\Documents"*
+
 ### Programs
 - Visual Studio 2019
 
