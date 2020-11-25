@@ -18,8 +18,8 @@ You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php
 **Application Name**: Kassasystem <br>
 **Application Version**: The current version of the application <br>
 **Application Publisher**: Your company name (e.g poG & Company) <br>
-**Application Website**: The website for the application (You can leave this empty) <br>
-After entering the information Click **Next**
+**Application Website**: The website for the application (You can leave this empty)
+<br> Click **Next** when you are done.
 4. In the next prompt you can change the default installation destination. You can leave this at default settings. <br> Click **Next** when you are done
 5. Next you will need to browse for the application executable (Kassasystem.exe). You can find the executable in the **kassaSystem\kassaSystem\bin\Debug** directory. <br> If needed, you can add additional files and folders in the box below. <br> Click **Next** when you are done.
 6. In the next prompt you can choose a file extension type for the application. Turn this option off by default. <br> Click **Next** when you are done.
