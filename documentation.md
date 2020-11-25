@@ -1,5 +1,16 @@
 # Documentation
 
+## Putting out a new release
+### Creating the EXE file
+**In Visual Studio 2019**
+1. On the right hand side inside the solution explorer, in solution tab for **kassaSystem**, right click on the **kassaSystem** project and click **Build**
+2. If the build succeeded the created exe file should now be located within the **kassaSystem\bin\Debug** directory
+
+### Creating the installer
+
+### Putting out a new release
+
+
 ## Tests
 ### Prerequisites
 **In Visual Studio 2019**
