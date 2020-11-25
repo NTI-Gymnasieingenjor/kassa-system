@@ -38,4 +38,8 @@ You can download the finished product [here](https://github.com/NTI-Gymnasieinge
 - Features must be merged to main branch.
 - Presentable.
 
+### New Release
+- The new release must contain an msi file for installating the program
+    - The installation file must contain the option to create a desktop shortcut
+
 
