@@ -2,30 +2,42 @@
 
 ## Putting out a new release
 
-### Creating the EXE file
+### Creating the .EXE file
 **In Visual Studio 2019**
 1. On the right hand side inside the solution explorer, in solution tab for **kassaSystem**, right-click on the **kassaSystem** project and click **Build**.
-2. If the build succeeded the created exe file should now be located within the **kassaSystem\bin\Debug** directory.
+2. If the build succeeded the created exe file should now be located within the **kassaSystem\kassaSystem\bin\Debug** directory.
 
 ### Creating the installer
-You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php) to run the scripts and make an installer.
-
-### Using an existing script
+You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php) to make an installer and run the scripts.
 
 ### Creating a new script
 **In Inno Setup Compiler**
-1. Under **New File** select **Create a new script file using the Script Wizard** and then click OK.
-2. You will be prompted a Wizard hit Next to proceed.
-3. Here you will be able to enter general information about the application. <br>
-```
-Application Name: Kassasystem
-Application Version: The current version of the application (e.g 1.2.0)
-Application Publisher: Your company name (e.g poG & Company)
-Application Website: The website for the application
-```
+1. Under **New File** select **Create a new script file using the Script Wizard** and then click **OK.**
+2. You will be prompted a Wizard hit **Next** to proceed.
+3. Here you will be able to enter general information about the application. <br><br>
+**Application Name**: Kassasystem <br>
+**Application Version**: The current version of the application <br>
+**Application Publisher**: Your company name (e.g poG & Company) <br>
+**Application Website**: The website for the application (You can leave this empty) <br><br>
+After entering the information Click **Next**
+4. In the next prompt you can change the default installation destination. You can leave this at default settings. <br> Click **Next** when you are done
+5. Next you will need to browse for the application executable (Kassasystem.exe). You can find the executable in the **kassaSystem\kassaSystem\bin\Debug** directory. <br> If needed, you can add additional files and folders in the box below. <br> Click **Next** when you are done.
+6. In the next prompt you can choose a file extension type for the application. Turn this option off by default. <br> Click **Next** when you are done.
+7. Next prompt is about shortcuts for the installed application. Leave this as is by default. <br> Click **Next** when you are done.
+8. In the next prompt you can browse for a Lisence and information .txt files. <br> You can leave everything empty if you don't have any. Click **Next** when you are done.
+9. Afterwards you can choose if it will be an Adminstrive installation or not. Leave this as is by default. <br> Click **Next** when you are done.
+10. In the next prompt you can choose which languages will be included in the installation file. English is chosen by default. <br> Click **Next** when you are done.
+11. Next choose where you wish to save compiler file. Name it **"kassasystemsetup"** and select the default Kassasystem icon, which can be found in **kassaSystem\assets**. Leave password empty. <br> Click **Next** when you are done.
+12. Next you can choose whether you wish to have Inno Compilers #define directives. This is good for the future when you wish to edit the script so leaving it on is recommended. <br> Click **Next** when you are done.
+13. Finally you are at the last step! <br> Click **Finish**.
 
-### Putting out a new release
+### Using an existing script
+**In Inno Setup Compiler**
+1. To the top left, click on the **File** tab and then click on **Open**.
+2. Browse for script file and open.
 
+### Running the Compiler
+To run the compiler open up your script file in **Inno Setup Compiler** <br> press **CTRL + F9** to start compiling <br> then press **F9** to Run your new installation file.
 
 ## Tests
 ### Prerequisites
