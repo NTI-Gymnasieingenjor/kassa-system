@@ -10,7 +10,7 @@
 ### Creating the installer
 You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php) to make an installer and run the scripts.
 
-### Creating a new script
+#### Creating a new installer script
 **In Inno Setup Compiler**
 1. Under **New File** select **Create a new script file using the Script Wizard** and then click **OK.**
 2. You will be prompted a Setup Wizard hit **Next** to proceed.
@@ -31,12 +31,12 @@ You will need to install [Inno Setup Compiler](https://jrsoftware.org/isinfo.php
 12. Next you can choose whether you wish to have Inno Compilers #define directives. This is good for the future when you wish to edit the script so leaving it on is recommended. <br> Click **Next** when you are done.
 13. Finally you are at the last step! <br> Click **Finish**.
 
-### Using an existing script
+#### Using an existing installer script
 **In Inno Setup Compiler**
 1. To the top left, click on the **File** tab and then click on **Open**.
 2. Browse for script file and open.
 
-### Running the Compiler
+#### Running the Compiler
 To run the compiler open up your script file in **Inno Setup Compiler** <br> press **CTRL + F9** to start compiling <br> then press **F9** to Run your new installation file.
 
 ## Tests
