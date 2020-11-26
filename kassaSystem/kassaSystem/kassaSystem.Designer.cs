@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KassaSystem));
             this.buttonBulle = new System.Windows.Forms.Button();
             this.textboxSumma = new System.Windows.Forms.TextBox();
             this.labelSumma = new System.Windows.Forms.Label();
@@ -35,9 +37,13 @@
             this.buttonKaffe = new System.Windows.Forms.Button();
             this.buttonKorv = new System.Windows.Forms.Button();
             this.buttonLask = new System.Windows.Forms.Button();
-            this.listViewProdukter = new System.Windows.Forms.ListView();
             this.buttonTaBort = new System.Windows.Forms.Button();
             this.buttonTaBort1x = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBulle
@@ -47,7 +53,7 @@
             this.buttonBulle.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBulle.Name = "buttonBulle";
             this.buttonBulle.Size = new System.Drawing.Size(365, 167);
-            this.buttonBulle.TabIndex = 2;
+            this.buttonBulle.TabIndex = 3;
             this.buttonBulle.Text = "Bulle";
             this.buttonBulle.UseVisualStyleBackColor = true;
             this.buttonBulle.Click += new System.EventHandler(this.button_Click);
@@ -59,7 +65,7 @@
             this.textboxSumma.Name = "textboxSumma";
             this.textboxSumma.ReadOnly = true;
             this.textboxSumma.Size = new System.Drawing.Size(246, 29);
-            this.textboxSumma.TabIndex = 7;
+            this.textboxSumma.TabIndex = 9;
             this.textboxSumma.Text = "0";
             // 
             // labelSumma
@@ -69,7 +75,7 @@
             this.labelSumma.Location = new System.Drawing.Point(906, 652);
             this.labelSumma.Name = "labelSumma";
             this.labelSumma.Size = new System.Drawing.Size(80, 24);
-            this.labelSumma.TabIndex = 8;
+            this.labelSumma.TabIndex = 0;
             this.labelSumma.Text = "Summa:";
             // 
             // buttonNollstall
@@ -77,7 +83,7 @@
             this.buttonNollstall.Location = new System.Drawing.Point(810, 679);
             this.buttonNollstall.Name = "buttonNollstall";
             this.buttonNollstall.Size = new System.Drawing.Size(94, 29);
-            this.buttonNollstall.TabIndex = 6;
+            this.buttonNollstall.TabIndex = 8;
             this.buttonNollstall.Text = "Nollställ";
             this.buttonNollstall.UseVisualStyleBackColor = true;
             this.buttonNollstall.Click += new System.EventHandler(this.buttonNollstall_Click);
@@ -89,7 +95,7 @@
             this.buttonKaffe.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKaffe.Name = "buttonKaffe";
             this.buttonKaffe.Size = new System.Drawing.Size(365, 167);
-            this.buttonKaffe.TabIndex = 4;
+            this.buttonKaffe.TabIndex = 5;
             this.buttonKaffe.Text = "Kaffe";
             this.buttonKaffe.UseVisualStyleBackColor = true;
             this.buttonKaffe.Click += new System.EventHandler(this.button_Click);
@@ -101,7 +107,7 @@
             this.buttonKorv.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKorv.Name = "buttonKorv";
             this.buttonKorv.Size = new System.Drawing.Size(365, 167);
-            this.buttonKorv.TabIndex = 1;
+            this.buttonKorv.TabIndex = 2;
             this.buttonKorv.Text = "Korv";
             this.buttonKorv.UseVisualStyleBackColor = true;
             this.buttonKorv.Click += new System.EventHandler(this.button_Click);
@@ -113,22 +119,10 @@
             this.buttonLask.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLask.Name = "buttonLask";
             this.buttonLask.Size = new System.Drawing.Size(365, 167);
-            this.buttonLask.TabIndex = 3;
+            this.buttonLask.TabIndex = 4;
             this.buttonLask.Text = "Läsk";
             this.buttonLask.UseVisualStyleBackColor = true;
             this.buttonLask.Click += new System.EventHandler(this.button_Click);
-            // 
-            // listViewProdukter
-            // 
-            this.listViewProdukter.HideSelection = false;
-            this.listViewProdukter.Location = new System.Drawing.Point(910, 45);
-            this.listViewProdukter.Name = "listViewProdukter";
-            this.listViewProdukter.Size = new System.Drawing.Size(246, 543);
-            this.listViewProdukter.TabIndex = 0;
-            this.listViewProdukter.TileSize = new System.Drawing.Size(200, 40);
-            this.listViewProdukter.UseCompatibleStateImageBehavior = false;
-            this.listViewProdukter.View = System.Windows.Forms.View.Tile;
-            this.listViewProdukter.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewProdukter_ItemSelectionChanged);
             // 
             // buttonTaBort
             // 
@@ -136,7 +130,7 @@
             this.buttonTaBort.Location = new System.Drawing.Point(1036, 594);
             this.buttonTaBort.Name = "buttonTaBort";
             this.buttonTaBort.Size = new System.Drawing.Size(120, 32);
-            this.buttonTaBort.TabIndex = 5;
+            this.buttonTaBort.TabIndex = 7;
             this.buttonTaBort.Text = "Ta bort produkt";
             this.buttonTaBort.UseVisualStyleBackColor = true;
             this.buttonTaBort.Click += new System.EventHandler(this.buttonTaBort_Click);
@@ -147,19 +141,71 @@
             this.buttonTaBort1x.Location = new System.Drawing.Point(910, 594);
             this.buttonTaBort1x.Name = "buttonTaBort1x";
             this.buttonTaBort1x.Size = new System.Drawing.Size(120, 32);
-            this.buttonTaBort1x.TabIndex = 9;
+            this.buttonTaBort1x.TabIndex = 6;
             this.buttonTaBort1x.Text = "Ta bort 1x";
             this.buttonTaBort1x.UseVisualStyleBackColor = true;
             this.buttonTaBort1x.Click += new System.EventHandler(this.buttonTaBort1x_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnProduct,
+            this.ColumnCount,
+            this.ColumnPrice});
+            this.dataGridView1.Location = new System.Drawing.Point(910, 44);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(246, 543);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // ColumnProduct
+            // 
+            this.ColumnProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnProduct.FillWeight = 50F;
+            this.ColumnProduct.HeaderText = "Product";
+            this.ColumnProduct.Name = "ColumnProduct";
+            this.ColumnProduct.ReadOnly = true;
+            this.ColumnProduct.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnProduct.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumnCount
+            // 
+            this.ColumnCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCount.FillWeight = 25F;
+            this.ColumnCount.HeaderText = "ProductCount";
+            this.ColumnCount.Name = "ColumnCount";
+            this.ColumnCount.ReadOnly = true;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnPrice.FillWeight = 25F;
+            this.ColumnPrice.HeaderText = "Price";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
             // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 720);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonTaBort1x);
             this.Controls.Add(this.buttonTaBort);
-            this.Controls.Add(this.listViewProdukter);
             this.Controls.Add(this.buttonLask);
             this.Controls.Add(this.buttonKorv);
             this.Controls.Add(this.buttonKaffe);
@@ -168,10 +214,12 @@
             this.Controls.Add(this.textboxSumma);
             this.Controls.Add(this.buttonBulle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KassaSystem";
             this.Text = "Kassasystem";
             this.Load += new System.EventHandler(this.KassaSystem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,9 +234,12 @@
         private System.Windows.Forms.Button buttonKaffe;
         private System.Windows.Forms.Button buttonKorv;
         private System.Windows.Forms.Button buttonLask;
-        private System.Windows.Forms.ListView listViewProdukter;
         private System.Windows.Forms.Button buttonTaBort;
         private System.Windows.Forms.Button buttonTaBort1x;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
     }
 }
 

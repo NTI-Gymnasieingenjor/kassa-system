@@ -25,9 +25,9 @@ namespace kassaSystem
         private void updateSumma()
         {
             textboxSumma.Text = "0";
-            foreach (ListViewItem item in listViewProdukter.Items)
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                string productName = item.Text.Substring(0, item.Text.LastIndexOf(" "));
+                string productName = row.Cells[0].Value.ToString();
                 var summa = int.Parse(textboxSumma.Text);
                 summa += productDictionary[productName] * priceDictionary[productName];
                 textboxSumma.Text = summa.ToString();
@@ -40,16 +40,28 @@ namespace kassaSystem
             {
                 int tidigareAntal = productDictionary[product];
                 productDictionary[product] = tidigareAntal + 1;
-                // Gets the item with the specified text
-                var currentItem = listViewProdukter.FindItemWithText(product);
-                // productDictionary[product] gets the value from the product key
-                currentItem.Text = product + " x" + productDictionary[product];
+                
+                int rowIndex = -1;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(product))
+                    {
+                        rowIndex = row.Index;
+                        break;
+                    }
+                }
+                // Creates variable from specified row
+                DataGridViewRow currentRow = dataGridView1.Rows[rowIndex];
+                currentRow.Cells[1].Value = "x" + productDictionary[product];
+                currentRow.Cells[2].Value = priceDictionary[product] * productDictionary[product];
             }
             else
             {
                 // Adds item to dictionary with the key "product" and the value "1"
                 productDictionary.Add(product, 1);
-                listViewProdukter.Items.Add(product + " x" + productDictionary[product]);
+
+                // Creates row with info
+                dataGridView1.Rows.Add(product,"x" + productDictionary[product], priceDictionary[product]);
             }
 
             updateSumma();
@@ -63,20 +75,21 @@ namespace kassaSystem
         private void buttonNollstall_Click(object sender, EventArgs e)
         {
             textboxSumma.Text = "0";
-            listViewProdukter.Clear();
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh(); // testa att ta bort
             productDictionary.Clear();
         }
 
         private void toggleOnSelect()
         {
-            // Enables buttons when one item is selected
-            if (listViewProdukter.SelectedItems.Count == 1)
+            // Enables buttons when one row is selected
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 buttonTaBort.Enabled = true;
                 buttonTaBort1x.Enabled = true;
             }
 
-            // Disables buttons when more than 1 or no buttons are selected
+            // Disables buttons when more than 1 or no rows are selected
             else
             {
                 buttonTaBort.Enabled = false;
@@ -86,19 +99,19 @@ namespace kassaSystem
 
         private void buttonTaBort1x_Click(object sender, EventArgs e)
         {
-            string input = listViewProdukter.SelectedItems[0].Text;
-            // Extracts product name from string
-            string productName = input.Substring(0, input.LastIndexOf(" "));
+            DataGridViewRow input = dataGridView1.SelectedRows[0];
+            // Extracts product name from row
+            string productName = input.Cells[0].Value.ToString();
 
             productDictionary[productName] -= 1;
 
-            var currentItem = listViewProdukter.FindItemWithText(productName);
-            currentItem.Text = productName + " x" + productDictionary[productName];
+            input.Cells[1].Value = "x" + productDictionary[productName];
+            input.Cells[2].Value = priceDictionary[productName] * productDictionary[productName];
 
             if (productDictionary[productName] == 0)
             {
                 productDictionary.Remove(productName);
-                listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+                dataGridView1.Rows.RemoveAt(input.Index);
             }
 
             updateSumma();
@@ -106,21 +119,26 @@ namespace kassaSystem
 
         private void buttonTaBort_Click(object sender, EventArgs e)
         {
-            string input = listViewProdukter.SelectedItems[0].Text;
-            // Extracts product name from string
-            string productName = input.Substring(0, input.LastIndexOf(" "));
-
+            DataGridViewRow input = dataGridView1.SelectedRows[0];
+            // Extracts product name from row
+            string productName = input.Cells[0].Value.ToString();
+            
             // Removes the specified key
             productDictionary.Remove(productName);
-            listViewProdukter.Items.Remove(listViewProdukter.SelectedItems[0]);
+            dataGridView1.Rows.RemoveAt(input.Index);
 
             updateSumma();
         }
 
-        // Calls toggleOnSelect when selection state in list changes
-        private void listViewProdukter_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        // Calls toggleOnSelect when selection state in dataGridView changes
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             toggleOnSelect();
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.Rows[0].Selected = false;
         }
     }
 }
