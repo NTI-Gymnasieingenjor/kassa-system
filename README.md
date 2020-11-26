@@ -1,10 +1,15 @@
 # Kassasystem
 
 ## Product
-You can download the finished product [here](https://github.com/NTI-Gymnasieingenjor/kassa-system/releases/latest/download/kassaSystem.zip). 
+You can download the latest release [here](https://github.com/NTI-Gymnasieingenjor/kassa-system/releases/latest/download/kassaSystem.zip). 
 
 ## Development Environment Standard
 - **Branch Name Structure:** snake_case
+
+### Documentation
+- **File Name Structure:** 
+    - File names should be expressed with backslashes and without spaces.
+    - **Example:** *"C:\Users\User\Documents"*
 
 ### Programs
 - Visual Studio 2019
@@ -32,5 +37,3 @@ You can download the finished product [here](https://github.com/NTI-Gymnasieinge
 - All members in the group must understand the code and approve the push.
 - Features must be merged to main branch.
 - Presentable.
-
-
