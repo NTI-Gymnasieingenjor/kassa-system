@@ -145,23 +145,6 @@ namespace kassaSystem
             // Checks if text is correct
             Assert.AreEqual("0", textboxSumma.Text);
         }
-
-        [Test]
-        public void TestIfNollstallButtonResetsList()
-        {
-            // Gets element from form
-            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
-            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
-            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
-
-            buttonBulle.Click();
-            buttonKorv.Click();
-            buttonNollstall.Click();
-
-            // Checks if list is empty
-            Assert.AreEqual(0, listViewProdukter.Items.Count);
-        }
     }
 }
 

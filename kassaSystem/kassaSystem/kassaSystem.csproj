@@ -53,7 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests\TestsList.cs" />
+    <Compile Include="Tests\TestsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="kassaSystem.cs">
       <SubType>Form</SubType>
     </Compile>

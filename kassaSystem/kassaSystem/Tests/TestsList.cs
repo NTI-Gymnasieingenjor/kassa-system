@@ -4,19 +4,39 @@ using NUnit.Framework;
 namespace kassaSystem
 {
     [TestFixture]
-    class TestsList : TestSetup
+    class TestsList : KassaSystem
     {
+        KassaSystem form;
+
+        [SetUp]
+        public void SetUp()
+        {
+            // Starts the program
+            form = new KassaSystem();
+
+            // Needed for the form the be tested
+            form.Show();
+        }
+
+        // Runs at the end of every test
+        [TearDown]
+        public void TearDown()
+        {
+            // Closes the program
+            form.Close();
+        }
+
         [Test]
         public void TestAddBulleToList()
         {
             // Gets element from form
             ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
-            ListViewTester listViewProdukter = new ListViewTester("listViewProdukter", "KassaSystem");
 
             buttonBulle.Click();
 
             // Checks if text is correct
-            Assert.AreEqual("Bulle x1", listViewProdukter.Items[0].Text);
+            Assert.AreEqual("Bulle", dataGridView1.Rows[0].Cells[0].Value);
+            //Assert.AreEqual("x1", dataGridView1.Rows[0].Cells[2].Value);
         }
 
         [Test]
@@ -70,6 +90,22 @@ namespace kassaSystem
 
             // Checks if second item in list is correct
             Assert.AreEqual("Bulle x1", listViewProdukter.Items[1].Text);
+        }
+
+        [Test]
+        public void TestIfNollstallButtonResetsList()
+        {
+            // Gets element from form
+            ButtonTester buttonBulle = new ButtonTester("buttonBulle", "KassaSystem");
+            ButtonTester buttonKorv = new ButtonTester("buttonKorv", "KassaSystem");
+            ButtonTester buttonNollstall = new ButtonTester("buttonNollstall", "KassaSystem");
+
+            buttonBulle.Click();
+            buttonKorv.Click();
+            buttonNollstall.Click();
+
+            // Checks if list is empty
+            Assert.AreEqual(0, dataGridView1.Rows.Count);
         }
 
         [Test]

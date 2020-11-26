@@ -236,10 +236,10 @@
         private System.Windows.Forms.Button buttonLask;
         private System.Windows.Forms.Button buttonTaBort;
         private System.Windows.Forms.Button buttonTaBort1x;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
