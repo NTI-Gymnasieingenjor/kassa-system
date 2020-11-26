@@ -64,5 +64,14 @@ namespace kassaSystem
             // Checks if text is correct
             Assert.AreEqual("Nollställ", buttonNollstall.Text);
         }
+        [Test]
+        public void TestCheckBetalaText()
+        {
+            // Gets element from form
+            ButtonTester buttonBetala = new ButtonTester("buttonBetala", "KassaSystem");
+
+            // Checks if text is correct
+            Assert.AreEqual("Betala", buttonBetala.Text);
+        }
     }
 }
