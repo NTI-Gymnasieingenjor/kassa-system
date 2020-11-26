@@ -39,6 +39,7 @@
             this.listViewProdukter = new System.Windows.Forms.ListView();
             this.buttonTaBort = new System.Windows.Forms.Button();
             this.buttonTaBort1x = new System.Windows.Forms.Button();
+            this.buttonBetala = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonBulle
@@ -75,9 +76,9 @@
             // 
             // buttonNollstall
             // 
-            this.buttonNollstall.Location = new System.Drawing.Point(810, 679);
+            this.buttonNollstall.Location = new System.Drawing.Point(1036, 714);
             this.buttonNollstall.Name = "buttonNollstall";
-            this.buttonNollstall.Size = new System.Drawing.Size(94, 29);
+            this.buttonNollstall.Size = new System.Drawing.Size(120, 29);
             this.buttonNollstall.TabIndex = 6;
             this.buttonNollstall.Text = "Nollställ";
             this.buttonNollstall.UseVisualStyleBackColor = true;
@@ -153,11 +154,22 @@
             this.buttonTaBort1x.UseVisualStyleBackColor = true;
             this.buttonTaBort1x.Click += new System.EventHandler(this.buttonTaBort1x_Click);
             // 
+            // buttonBetala
+            // 
+            this.buttonBetala.Location = new System.Drawing.Point(910, 714);
+            this.buttonBetala.Name = "buttonBetala";
+            this.buttonBetala.Size = new System.Drawing.Size(120, 29);
+            this.buttonBetala.TabIndex = 10;
+            this.buttonBetala.Text = "Betala";
+            this.buttonBetala.UseVisualStyleBackColor = true;
+            this.buttonBetala.Click += new System.EventHandler(this.buttonNollstall_Click);
+            // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 720);
+            this.ClientSize = new System.Drawing.Size(1180, 746);
+            this.Controls.Add(this.buttonBetala);
             this.Controls.Add(this.buttonTaBort1x);
             this.Controls.Add(this.buttonTaBort);
             this.Controls.Add(this.listViewProdukter);
@@ -191,6 +203,7 @@
         private System.Windows.Forms.ListView listViewProdukter;
         private System.Windows.Forms.Button buttonTaBort;
         private System.Windows.Forms.Button buttonTaBort1x;
+        private System.Windows.Forms.Button buttonBetala;
     }
 }
 
