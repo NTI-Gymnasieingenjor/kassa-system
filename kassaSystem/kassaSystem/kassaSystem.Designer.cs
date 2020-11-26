@@ -43,6 +43,7 @@
             this.ColumnProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonBetala = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,9 +81,9 @@
             // 
             // buttonNollstall
             // 
-            this.buttonNollstall.Location = new System.Drawing.Point(810, 679);
+            this.buttonNollstall.Location = new System.Drawing.Point(1036, 714);
             this.buttonNollstall.Name = "buttonNollstall";
-            this.buttonNollstall.Size = new System.Drawing.Size(94, 29);
+            this.buttonNollstall.Size = new System.Drawing.Size(120, 29);
             this.buttonNollstall.TabIndex = 8;
             this.buttonNollstall.Text = "Nollställ";
             this.buttonNollstall.UseVisualStyleBackColor = true;
@@ -198,11 +199,22 @@
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
             // 
+            // buttonBetala
+            // 
+            this.buttonBetala.Location = new System.Drawing.Point(910, 714);
+            this.buttonBetala.Name = "buttonBetala";
+            this.buttonBetala.Size = new System.Drawing.Size(120, 29);
+            this.buttonBetala.TabIndex = 10;
+            this.buttonBetala.Text = "Betala";
+            this.buttonBetala.UseVisualStyleBackColor = true;
+            this.buttonBetala.Click += new System.EventHandler(this.buttonNollstall_Click);
+            // 
             // KassaSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 720);
+            this.ClientSize = new System.Drawing.Size(1180, 750);
+            this.Controls.Add(this.buttonBetala);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonTaBort1x);
             this.Controls.Add(this.buttonTaBort);
@@ -240,6 +252,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
+        private System.Windows.Forms.Button buttonBetala;
     }
 }
 
